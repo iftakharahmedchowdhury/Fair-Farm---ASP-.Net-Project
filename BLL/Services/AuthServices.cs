@@ -73,6 +73,26 @@ namespace BLL.Services
             }
             return false;
         }
+
+        public static bool IsTrader(string tkey)
+        {
+            var extk = DataAccessFactory.TokenData().Get(tkey);
+            if (IsTokenValid(tkey) && extk.User.UserType.Equals("Trader"))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool IsFarmer(string tkey)
+        {
+            var extk = DataAccessFactory.TokenData().Get(tkey);
+            if (IsTokenValid(tkey) && extk.User.UserType.Equals("Farmer"))
+            {
+                return true;
+            }
+            return false;
+        }
     }
     }
 
