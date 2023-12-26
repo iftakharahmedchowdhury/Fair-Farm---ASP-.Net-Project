@@ -36,7 +36,17 @@ namespace DAL
             return new AdminStoredItemRepo();
         }
 
+        public static IRepo<BuySellRequestBetweenFarmerAndTrader, int, BuySellRequestBetweenFarmerAndTrader> BuySellRequestBetweenFarmerAndTraderData()
+        {
 
+            return new BuySellRequestBetweenFarmerAndTraderRepo();
+        }
+
+        public static IRepo<RegularPriceUpdate, int, RegularPriceUpdate> RegularPriceData()
+        {
+
+            return new ManageRegularPriceUpdateRepo();
+        }
 
 
         public static IAuth AuthData()

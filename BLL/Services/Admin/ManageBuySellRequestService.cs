@@ -29,12 +29,12 @@ namespace BLL.Services
             {
                 var requestItems = new List<RequestTableItemDTO>(); 
 
-                var requestItem = DataAccessFactory.RequestTableItemData().GetItem(request.Id); // get items
+                var requestItem = DataAccessFactory.RequestTableItemData().GetItem(request.Id); 
 
                 var data2 = mapper.Map<List<RequestTableItemDTO>>(requestItem);
                 requestItems.AddRange(data2);
 
-                request.RequestItems = requestItems; // Assign the list to the RequestItems property
+                request.RequestItems = requestItems; 
             }
 
             return requestList;
@@ -59,18 +59,19 @@ namespace BLL.Services
             {
                 requestItem.RequestId = addedRequest.Id;
                 DataAccessFactory.RequestTableItemData().Add(requestItem);
+
             }
         }
 
-       
+
         public static void UpdateStatusAndAddItems(int requestId)
         {
             var request = DataAccessFactory.RequestCropData().Get(requestId);
 
-            if (request != null)
+            if (request != null && request.RequestType == "Sell")
             {
-                
-                request.Status = "Accepted"; // Update the status to "Accepted"
+
+                request.Status = "Accepted"; 
                 DataAccessFactory.RequestCropData().Update(request);
 
                 var requestItems = DataAccessFactory.RequestTableItemData().GetItem(requestId);
@@ -83,14 +84,49 @@ namespace BLL.Services
                     var adminStoredItem = mapper.Map<AdminStoredItem>(item);
                     adminStoredItem.StorageRequestId = requestId;
 
-                    DataAccessFactory.AdminStoredItemData().Add(adminStoredItem); // Add items to AdminStoredItems table
+                    var adminStoreData = DataAccessFactory.AdminStoredItemData().Add(adminStoredItem); 
+
+                    RegularPriceUpdate RegPriceItem = new RegularPriceUpdate();
+
+                    RegPriceItem.Id=adminStoreData.Id;
+                    RegPriceItem.CropName = adminStoreData.CropsName;
+                    RegPriceItem.CropQuantity = adminStoreData.CropsQuantity;
+                    RegPriceItem.Price = (((adminStoreData.Price / adminStoreData.CropsQuantity) + 10) * adminStoreData.CropsQuantity);
+                    RegPriceItem.Description = adminStoreData.Description;
+                    RegPriceItem.AdminStoredItemId = adminStoreData.StorageRequestId;
+                    DataAccessFactory.RegularPriceData().Add(RegPriceItem);
                 }
             }
         }
 
 
 
+        public static void UpdateStatusAndSendToTrader(int requestId)
+        {
+            var request = DataAccessFactory.RequestCropData().Get(requestId);
 
+            if (request != null && request.RequestType == "Sell") 
+            {
+                request.Status = "Refere"; 
+                DataAccessFactory.RequestCropData().Update(request);
+
+                var requestItems = DataAccessFactory.RequestTableItemData().GetItem(requestId);
+
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<RequestTableItem, BuySellRequestBetweenFarmerAndTrader>());
+                var mapper = new Mapper(config);
+
+                foreach (var item in requestItems)
+                {
+                    var buySellRequestItem = mapper.Map<BuySellRequestBetweenFarmerAndTrader>(item);
+                    buySellRequestItem.RequestId = requestId;
+                    buySellRequestItem.Userid = request.UserId;
+                    buySellRequestItem.RequestType = request.RequestType;
+                    buySellRequestItem.Status = request.Status;
+
+                    DataAccessFactory.BuySellRequestBetweenFarmerAndTraderData().Add(buySellRequestItem);
+                }
+            }
+        }
 
 
     }

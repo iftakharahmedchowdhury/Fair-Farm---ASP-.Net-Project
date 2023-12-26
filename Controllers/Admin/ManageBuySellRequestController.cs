@@ -49,7 +49,7 @@ namespace Fair_Farm.Controllers.Admin
 
         [AdminAccess]
         [HttpPut]
-        [Route("api/CropRequest/updateStatusAndAddItems/{requestId}")]
+        [Route("api/CropRequest/adminBuy/{requestId}")]
         public HttpResponseMessage UpdateStatusAndAddItems(int requestId)
         {
             try
@@ -62,6 +62,24 @@ namespace Fair_Farm.Controllers.Admin
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, e.Message);
             }
         }
+
+        [AdminAccess]
+        [HttpPut]
+        [Route("api/CropRequest/adminNotBuy/{requestId}")]
+        public HttpResponseMessage UpdateStatusAndSendToTrader(int requestId)
+        {
+            try
+            {
+                ManageBuySellRequestService.UpdateStatusAndSendToTrader(requestId);
+                return Request.CreateResponse(HttpStatusCode.OK, "Status updated to 'Refere' and items stored in BuySellRequestBetweenFarmerAndTrader");
+            }
+            catch (Exception e)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, e.Message);
+            }
+
+        }
+
 
 
 

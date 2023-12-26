@@ -50,7 +50,7 @@ namespace DAL.Repos.Admin
                 db.SaveChanges();
                 return existingRequest;
             }
-            return null; // Return null if the request doesn't exist
+            return null;
         }
 
     }
