@@ -46,7 +46,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DTOs\AdminStoredItemDTO.cs" />
+    <Compile Include="DTOs\BuySellRequestBetweenFarmerAndTraderDTO.cs" />
+    <Compile Include="DTOs\ColdStorageItemListDTO.cs" />
+    <Compile Include="DTOs\EquipmentRentDTO.cs" />
+    <Compile Include="DTOs\FreeSeedsDistributionDTO.cs" />
+    <Compile Include="DTOs\ManageColdStorageDTO.cs" />
+    <Compile Include="DTOs\PlantingCalendarDTO.cs" />
+    <Compile Include="DTOs\PreviousPriceDTO.cs" />
+    <Compile Include="DTOs\RegularPriceUpdateDTO.cs" />
+    <Compile Include="DTOs\RequestTableDTO.cs" />
+    <Compile Include="DTOs\RequestTableItemDTO.cs" />
+    <Compile Include="DTOs\StoredItemInColdStorageDTO.cs" />
     <Compile Include="DTOs\TokenDTO.cs" />
+    <Compile Include="DTOs\TrainingTableDTO.cs" />
+    <Compile Include="DTOs\TransportationFleetRegisterDTO.cs" />
+    <Compile Include="DTOs\TransportationFleetRentDTO.cs" />
     <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AuthServices.cs" />
@@ -59,9 +74,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DTOs\Admin\" />
-    <Folder Include="DTOs\Farmer\" />
-    <Folder Include="DTOs\Trader\" />
     <Folder Include="Services\Admin\" />
     <Folder Include="Services\Farmer\" />
     <Folder Include="Services\Trader\" />
