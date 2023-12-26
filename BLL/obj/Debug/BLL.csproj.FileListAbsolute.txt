@@ -68,3 +68,17 @@ E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 5\BLL\ob
 E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 5\BLL\obj\Debug\BLL.csproj.CopyComplete
 E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 5\BLL\obj\Debug\BLL.dll
 E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 5\BLL\obj\Debug\BLL.pdb
+E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 6\BLL\bin\Debug\BLL.dll
+E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 6\BLL\bin\Debug\BLL.pdb
+E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 6\BLL\bin\Debug\AutoMapper.dll
+E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 6\BLL\bin\Debug\DAL.dll
+E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 6\BLL\bin\Debug\EntityFramework.dll
+E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 6\BLL\bin\Debug\DAL.pdb
+E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 6\BLL\bin\Debug\DAL.dll.config
+E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 6\BLL\bin\Debug\AutoMapper.xml
+E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 6\BLL\bin\Debug\EntityFramework.xml
+E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 6\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 6\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 6\BLL\obj\Debug\BLL.csproj.CopyComplete
+E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 6\BLL\obj\Debug\BLL.dll
+E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair Farm - 6\BLL\obj\Debug\BLL.pdb
