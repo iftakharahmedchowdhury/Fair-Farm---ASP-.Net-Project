@@ -86,6 +86,7 @@
     <Compile Include="Repos\Admin\ManageBuySellRequestItemRepo.cs" />
     <Compile Include="Repos\Admin\ManageBuySellRequestRepo.cs" />
     <Compile Include="Repos\Admin\ManageRegularPriceUpdateRepo.cs" />
+    <Compile Include="Repos\Admin\ManageTraningRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
     <Compile Include="Repos\UserRepo.cs" />

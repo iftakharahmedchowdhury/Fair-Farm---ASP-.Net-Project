@@ -98,6 +98,7 @@
     <Compile Include="Auth\Logged.cs" />
     <Compile Include="Controllers\Admin\ManageBuySellRequestController.cs" />
     <Compile Include="Controllers\Admin\ManageRegularPriceUpdateController.cs" />
+    <Compile Include="Controllers\Admin\ManageTraningController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">

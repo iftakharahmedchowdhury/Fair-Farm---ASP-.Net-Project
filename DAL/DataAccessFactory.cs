@@ -18,6 +18,11 @@ namespace DAL
 
             return new UserRepo();
         }
+        public static IRepo<TrainingTable, int, TrainingTable> TrainingData()
+        {
+
+            return new ManageTraningRepo();
+        }
 
         public static IRepo<RequestTable, int, RequestTable> RequestCropData()
         {
