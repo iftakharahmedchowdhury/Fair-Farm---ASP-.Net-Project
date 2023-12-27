@@ -54,7 +54,7 @@ namespace DAL.Repos
                                    where s.UserName.Equals(uname) && s.Password.Equals(pass)
                                    select s;*/
             var data = from s in db.Users
-                       where s.UserName.Equals(uname)
+                       where s.UsersUserName.Equals(uname)
                             && s.Password.Equals(pass)
                             && s.UserLogInValid == true
                        select s;
@@ -65,7 +65,7 @@ namespace DAL.Repos
 
         public int GetUserIdByUserName(string userName)
         {
-            var user = db.Users.FirstOrDefault(u => u.UserName.Equals(userName));
+            var user = db.Users.FirstOrDefault(u => u.UsersUserName.Equals(userName));
             return user != null ? user.UserId : -1; 
         }
     }

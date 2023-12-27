@@ -92,6 +92,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Auth\FarmerAccess.cs" />
+    <Compile Include="Auth\TraderAccess.cs" />
+    <Compile Include="Auth\AdminAccess.cs" />
+    <Compile Include="Auth\Logged.cs" />
+    <Compile Include="Controllers\Admin\ManageBuySellRequestController.cs" />
+    <Compile Include="Controllers\Admin\ManageRegularPriceUpdateController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -111,7 +117,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\Admin\" />
     <Folder Include="Controllers\Farmer\" />
     <Folder Include="Controllers\Trader\" />
   </ItemGroup>

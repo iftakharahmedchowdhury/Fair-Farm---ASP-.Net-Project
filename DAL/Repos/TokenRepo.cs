@@ -19,12 +19,18 @@ namespace DAL.Repos
 
         public bool Delete(string id)
         {
-            throw new NotImplementedException();
+            var tokenToDelete = Get(id);
+            if (tokenToDelete != null)
+            {
+                db.Tokens.Remove(tokenToDelete);
+                return db.SaveChanges() > 0;
+            }
+            return false;
         }
 
         public List<Token> Get()
         {
-            throw new NotImplementedException();
+            return db.Tokens.ToList();
         }
 
         public Token Get(string id)
