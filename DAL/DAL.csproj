@@ -82,6 +82,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
+    <Compile Include="Repos\Trader\test.cs" />
     <Compile Include="Repos\UserRepo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -94,7 +95,6 @@
     <Folder Include="Interfaces\Trader\" />
     <Folder Include="Repos\Admin\" />
     <Folder Include="Repos\Farmer\" />
-    <Folder Include="Repos\Trader\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202312230624111_creatingAllTablesAndRelationship.resx">
