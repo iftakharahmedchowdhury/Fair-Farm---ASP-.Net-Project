@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos.Admin
 {
-    internal class ManageTraningRepo : Repo, IRepo<TrainingTable, int, TrainingTable>
+    internal class ManageColdStorageRepo : Repo, IRepo<ManageColdStorage, int, ManageColdStorage>
     {
-        public TrainingTable Add(TrainingTable obj)
+        public ManageColdStorage Add(ManageColdStorage obj)
         {
-            db.TrainingTables.Add(obj);
+            db.ManageColdStorages.Add(obj);
             db.SaveChanges();
             return obj;
         }
@@ -20,21 +20,21 @@ namespace DAL.Repos.Admin
         public bool Delete(int obj)
         {
             var ex = Get(obj);
-            db.TrainingTables.Remove(ex);
+            db.ManageColdStorages.Remove(ex);
             return db.SaveChanges() > 0;
         }
 
-        public List<TrainingTable> Get()
+        public List<ManageColdStorage> Get()
         {
-            return db.TrainingTables.ToList();
+            return db.ManageColdStorages.ToList();
         }
 
-        public TrainingTable Get(int id)
+        public ManageColdStorage Get(int id)
         {
-            return db.TrainingTables.Find(id);
+            return db.ManageColdStorages.Find(id);
         }
 
-        public TrainingTable Update(TrainingTable obj)
+        public ManageColdStorage Update(ManageColdStorage obj)
         {
             var ex = Get(obj.Id);
             db.Entry(ex).CurrentValues.SetValues(obj);

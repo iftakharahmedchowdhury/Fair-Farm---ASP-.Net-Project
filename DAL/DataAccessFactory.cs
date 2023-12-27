@@ -23,6 +23,11 @@ namespace DAL
 
             return new ManageTraningRepo();
         }
+        public static IRepo<ManageColdStorage, int, ManageColdStorage> ColdStorageData()
+        {
+
+            return new ManageColdStorageRepo();
+        }
 
         public static IRepo<RequestTable, int, RequestTable> RequestCropData()
         {

@@ -85,6 +85,7 @@
     <Compile Include="Repos\Admin\BuySellRequestBetweenFarmerAndTraderRepo.cs" />
     <Compile Include="Repos\Admin\ManageBuySellRequestItemRepo.cs" />
     <Compile Include="Repos\Admin\ManageBuySellRequestRepo.cs" />
+    <Compile Include="Repos\Admin\ManageColdStorageRepo.cs" />
     <Compile Include="Repos\Admin\ManageRegularPriceUpdateRepo.cs" />
     <Compile Include="Repos\Admin\ManageTraningRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
