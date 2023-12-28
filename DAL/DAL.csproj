@@ -71,6 +71,7 @@
     <Compile Include="EF\Models\TransportationFleetRegister.cs" />
     <Compile Include="EF\Models\TransportationFleetRent.cs" />
     <Compile Include="EF\Models\User.cs" />
+    <Compile Include="Interfaces\Admin\IColdStorageRequestManage.cs" />
     <Compile Include="Interfaces\Admin\ICropBuySellRequest.cs" />
     <Compile Include="Interfaces\Admin\IPreviousPrice.cs" />
     <Compile Include="Interfaces\Admin\IRegularPriceDataByName.cs" />
@@ -89,10 +90,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\Admin\AdminStoredItemRepo.cs" />
     <Compile Include="Repos\Admin\BuySellRequestBetweenFarmerAndTraderRepo.cs" />
+    <Compile Include="Repos\Admin\ColdStorageRequestItemRepo.cs" />
     <Compile Include="Repos\Admin\FreeSeedsDistributionManagementRepo.cs" />
     <Compile Include="Repos\Admin\ManageBuySellRequestItemRepo.cs" />
     <Compile Include="Repos\Admin\ManageBuySellRequestRepo.cs" />
     <Compile Include="Repos\Admin\ManageColdStorageRepo.cs" />
+    <Compile Include="Repos\Admin\ManageColdStorageRequestRepo.cs" />
     <Compile Include="Repos\Admin\ManageRegularPriceUpdateRepo.cs" />
     <Compile Include="Repos\Admin\ManageTraningRepo.cs" />
     <Compile Include="Repos\Admin\PreviousPriceRepo.cs" />

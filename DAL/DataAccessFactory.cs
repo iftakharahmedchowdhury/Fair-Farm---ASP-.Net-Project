@@ -50,6 +50,39 @@ namespace DAL
             return new ManageBuySellRequestItemRepo();
         }
 
+
+
+
+
+
+
+
+        public static IRepo<StoredItemInColdStorage, int, StoredItemInColdStorage> ColdStorageStoreData()
+        {
+
+            return new ManageColdStorageRequestRepo(); //Store items in Cold Storage Aftter accepting
+        }
+        public static IColdStorageRequestManage<ColdStorageItemList, int, ColdStorageItemList> ColdStorageRequestItemData()
+        {
+
+            return new ColdStorageRequestItemRepo(); // manage and Get requested Items
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public static IRepo<AdminStoredItem, int, AdminStoredItem> AdminStoredItemData()
         {
 

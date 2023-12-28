@@ -99,6 +99,7 @@
     <Compile Include="Controllers\Admin\FreeSeedsDistributionManagementController.cs" />
     <Compile Include="Controllers\Admin\ManageBuySellRequestController.cs" />
     <Compile Include="Controllers\Admin\ManageColdStorageController.cs" />
+    <Compile Include="Controllers\Admin\ManageColdStorageRequestController.cs" />
     <Compile Include="Controllers\Admin\ManageRegularPriceUpdateController.cs" />
     <Compile Include="Controllers\Admin\ManageTraningController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
