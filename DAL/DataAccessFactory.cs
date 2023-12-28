@@ -62,6 +62,12 @@ namespace DAL
 
             return new ManageRegularPriceUpdateRepo();
         }
+        public static IRegularPriceDataByName<RegularPriceUpdate, string, RegularPriceUpdate> RegularPriceNameData()
+        {
+
+            return new ManageRegularPriceUpdateRepo();
+        }
+
 
 
         public static IAuth AuthData()

@@ -80,6 +80,38 @@ namespace Fair_Farm.Controllers.Admin
 
         }
 
+        [AdminAccess]
+        [HttpPut]
+        [Route("api/CropRequest/adminSell/{requestId}")]
+        public HttpResponseMessage UpdateStatusAndSellItems(int requestId)
+        {
+            try
+            {
+                ManageBuySellRequestService.UpdateStatusAndSellItems(requestId);
+                return Request.CreateResponse(HttpStatusCode.OK, "Status updated to 'Sold' and items dedacted to AdminStoredItems");
+            }
+            catch (Exception e)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, e.Message);
+            }
+        }
+
+        [AdminAccess]
+        [HttpPut]
+        [Route("api/CropRequest/adminNotSell/{requestId}")]
+        public HttpResponseMessage UpdateStatusAndSendToFarmer(int requestId)
+        {
+            try
+            {
+                ManageBuySellRequestService.UpdateStatusAndSendToFarmer(requestId);
+                return Request.CreateResponse(HttpStatusCode.OK, "Status updated to 'Sold' and items dedacted to AdminStoredItems");
+            }
+            catch (Exception e)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, e.Message);
+            }
+        }
+
 
 
 
