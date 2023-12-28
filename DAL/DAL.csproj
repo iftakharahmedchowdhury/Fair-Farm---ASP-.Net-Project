@@ -79,6 +79,10 @@
     <Compile Include="Migrations\202312230624111_creatingAllTablesAndRelationship.designer.cs">
       <DependentUpon>202312230624111_creatingAllTablesAndRelationship.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312280623598_updatingModelFreeseedDistribution.cs" />
+    <Compile Include="Migrations\202312280623598_updatingModelFreeseedDistribution.designer.cs">
+      <DependentUpon>202312280623598_updatingModelFreeseedDistribution.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\Admin\AdminStoredItemRepo.cs" />
@@ -103,6 +107,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202312230624111_creatingAllTablesAndRelationship.resx">
       <DependentUpon>202312230624111_creatingAllTablesAndRelationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312280623598_updatingModelFreeseedDistribution.resx">
+      <DependentUpon>202312280623598_updatingModelFreeseedDistribution.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
