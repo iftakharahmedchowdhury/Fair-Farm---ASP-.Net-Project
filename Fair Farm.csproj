@@ -96,6 +96,7 @@
     <Compile Include="Auth\TraderAccess.cs" />
     <Compile Include="Auth\AdminAccess.cs" />
     <Compile Include="Auth\Logged.cs" />
+    <Compile Include="Controllers\Admin\FreeSeedsDistributionManagementController.cs" />
     <Compile Include="Controllers\Admin\ManageBuySellRequestController.cs" />
     <Compile Include="Controllers\Admin\ManageColdStorageController.cs" />
     <Compile Include="Controllers\Admin\ManageRegularPriceUpdateController.cs" />

@@ -28,6 +28,11 @@ namespace DAL
 
             return new ManageColdStorageRepo();
         }
+        public static IRepo<FreeSeedsDistribution, int, FreeSeedsDistribution> FreeSeedReqData()
+        {
+
+            return new FreeSeedsDistributionManagementRepo();
+        }
 
         public static IRepo<RequestTable, int, RequestTable> RequestCropData()
         {

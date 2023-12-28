@@ -64,6 +64,7 @@
     <Compile Include="DTOs\TransportationFleetRentDTO.cs" />
     <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Admin\FreeSeedsDistributionManagementService.cs" />
     <Compile Include="Services\Admin\ManageBuySellRequestService.cs" />
     <Compile Include="Services\Admin\ManageColdStorageService.cs" />
     <Compile Include="Services\Admin\ManageRegularPriceUpdateService.cs" />
