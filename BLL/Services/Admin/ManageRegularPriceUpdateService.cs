@@ -62,6 +62,21 @@ namespace BLL.Services.Admin
 
         public static RegularPriceUpdateDTO Update(RegularPriceUpdateDTO price)
         {
+            var previousPrice = Get(price.Id);
+            var configPP = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<RegularPriceUpdateDTO, PreviousPrice>();
+            });
+            var mapperPP = new Mapper(configPP);
+            var dataPP = mapperPP.Map<PreviousPrice>(previousPrice);
+            var dataCheckAvailable = DataAccessFactory.PreviousPriceData().Get(dataPP.Id);
+            if (dataCheckAvailable!=null)
+            {
+                DataAccessFactory.PreviousPriceData().Delete(dataPP.Id);
+
+            }
+            DataAccessFactory.PreviousPriceData().Add(dataPP);
+
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<RegularPriceUpdateDTO, RegularPriceUpdate>();

@@ -39,6 +39,11 @@ namespace DAL
 
             return new ManageBuySellRequestRepo();
         }
+        public static IPreviousPrice<PreviousPrice, int, PreviousPrice> PreviousPriceData()
+        {
+
+            return new PreviousPriceRepo();
+        }
         public static ICropBuySellRequest<RequestTableItem, int, RequestTableItem> RequestTableItemData()
         {
 

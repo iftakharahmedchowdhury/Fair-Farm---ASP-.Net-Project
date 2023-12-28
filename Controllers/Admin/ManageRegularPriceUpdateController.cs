@@ -14,7 +14,7 @@ namespace Fair_Farm.Controllers.Admin
     {
         [Logged]
         [HttpGet]
-        [Route("api/RegularPriceUpdate/all")]
+        [Route("api/RegularPrice/all")]
         public HttpResponseMessage All()
         {
             try
@@ -31,7 +31,7 @@ namespace Fair_Farm.Controllers.Admin
         }
         [AdminAccess]
         [HttpPost]
-        [Route("api/RegularPriceUpdate/create")]
+        [Route("api/RegularPrice/create")]
         public HttpResponseMessage Create(RegularPriceUpdateDTO s)
         {
             try
