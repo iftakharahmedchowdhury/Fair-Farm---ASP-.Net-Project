@@ -3,6 +3,7 @@ using DAL.Interfaces;
 using DAL.Interfaces.Admin;
 using DAL.Repos;
 using DAL.Repos.Admin;
+using DAL.Repos.Farmer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,7 +48,11 @@ namespace DAL
 
             return new ManageRegularPriceUpdateRepo();
         }
+        public static IRepo<PlantingCalendar, int, PlantingCalendar> PlantingCalenderData()
+        {
 
+            return new FarmerPlantingCalenderRepo();
+        }
 
         public static IAuth AuthData()
         {

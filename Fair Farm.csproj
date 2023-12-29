@@ -99,6 +99,7 @@
     <Compile Include="Controllers\Admin\ManageBuySellRequestController.cs" />
     <Compile Include="Controllers\Admin\ManageRegularPriceUpdateController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\Farmer\PlantingCalenderController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -117,7 +118,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\Farmer\" />
     <Folder Include="Controllers\Trader\" />
   </ItemGroup>
   <ItemGroup>

@@ -72,6 +72,7 @@
     <Compile Include="EF\Models\TransportationFleetRent.cs" />
     <Compile Include="EF\Models\User.cs" />
     <Compile Include="Interfaces\Admin\ICropBuySellRequest.cs" />
+    <Compile Include="Interfaces\Farmer\IPlantingCalender.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IUserIdFormUname.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Repos\Admin\ManageBuySellRequestItemRepo.cs" />
     <Compile Include="Repos\Admin\ManageBuySellRequestRepo.cs" />
     <Compile Include="Repos\Admin\ManageRegularPriceUpdateRepo.cs" />
+    <Compile Include="Repos\Farmer\FarmerPlantingCalenderRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
     <Compile Include="Repos\UserRepo.cs" />
@@ -99,9 +101,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interfaces\Farmer\" />
     <Folder Include="Interfaces\Trader\" />
-    <Folder Include="Repos\Farmer\" />
     <Folder Include="Repos\Trader\" />
   </ItemGroup>
   <ItemGroup>

@@ -67,6 +67,7 @@
     <Compile Include="Services\Admin\ManageBuySellRequestService.cs" />
     <Compile Include="Services\Admin\ManageRegularPriceUpdateService.cs" />
     <Compile Include="Services\AuthServices.cs" />
+    <Compile Include="Services\Farmer\FarmerPlantingCalenderService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,7 +77,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\Farmer\" />
     <Folder Include="Services\Trader\" />
   </ItemGroup>
   <ItemGroup>
