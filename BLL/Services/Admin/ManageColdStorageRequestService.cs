@@ -40,34 +40,43 @@ namespace BLL.Services.Admin
         }
 
 
-
-
-
-        public static void UpdateStatusAndAddItemsInColdStorage(int requestId)
+        public static void UpdateStatusAndAddItemsInColdStorage(int requestId, int coldStorageId)
         {
             var request = DataAccessFactory.RequestCropData().Get(requestId);
 
             if (request != null && request.RequestType == "ColdStorage")
             {
-
                 request.Status = "Accepted";
                 DataAccessFactory.RequestCropData().Update(request);
 
                 var requestItems = DataAccessFactory.ColdStorageRequestItemData().GetItem(requestId);
 
-                var config = new MapperConfiguration(cfg => cfg.CreateMap<ColdStorageItemListDTO, StoredItemInColdStorage>());
+                var config = new MapperConfiguration(cfg =>
+                {
+                    cfg.CreateMap<ColdStorageItemList, ColdStorageItemListDTO>();
+                    cfg.CreateMap<ColdStorageItemListDTO, StoredItemInColdStorage>();
+                       
+                });
+
+
                 var mapper = new Mapper(config);
 
                 foreach (var item in requestItems)
                 {
-                    var adminStoredItem = mapper.Map<StoredItemInColdStorage>(item);
-                    adminStoredItem.ColdStorageId = 0;
-
+                    var coldStorageItemListDTO = mapper.Map<ColdStorageItemListDTO>(item);
+                    
+                    var adminStoredItem = mapper.Map<StoredItemInColdStorage>(coldStorageItemListDTO);
+                    adminStoredItem.ColdStorageId = coldStorageId;
                     var adminStoreData = DataAccessFactory.ColdStorageStoreData().Add(adminStoredItem);
-
+                    var coldStrData = ManageColdStorageService.Get(coldStorageId);
+                    coldStrData.Capacity = coldStrData.Capacity - adminStoredItem.CropsQuantity;
+                    ManageColdStorageService.Update(coldStrData);
                 }
             }
         }
+
+
+
 
         public static void UpdateStatusAndAdminRejected(int requestId)
         {

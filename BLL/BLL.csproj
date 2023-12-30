@@ -49,6 +49,7 @@
     <Compile Include="DTOs\AdminStoredItemDTO.cs" />
     <Compile Include="DTOs\BuySellRequestBetweenFarmerAndTraderDTO.cs" />
     <Compile Include="DTOs\ColdStorageItemListDTO.cs" />
+    <Compile Include="DTOs\ColdStorageUpdateModel.cs" />
     <Compile Include="DTOs\EquipmentRentDTO.cs" />
     <Compile Include="DTOs\FreeSeedsDistributionDTO.cs" />
     <Compile Include="DTOs\ManageColdStorageDTO.cs" />

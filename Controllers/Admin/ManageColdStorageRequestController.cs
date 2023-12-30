@@ -32,30 +32,47 @@ namespace Fair_Farm.Controllers.Admin
             }
         }
 
-  /*      [Logged]
-        [HttpPost]
-        [Route("api/ColdStorageRequest/create")]
-        public HttpResponseMessage Add(RequestTableDTO requestDto)
-        {
-            try
-            {
-                ManageBuySellRequestService.AddRequestAndItems(requestDto);
-                return Request.CreateResponse(HttpStatusCode.OK, "Data added successfully");
-            }
-            catch (Exception e)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, e.Message);
-            }
-        }*/
+        /*      [Logged]
+              [HttpPost]
+              [Route("api/ColdStorageRequest/create")]
+              public HttpResponseMessage Add(RequestTableDTO requestDto)
+              {
+                  try
+                  {
+                      ManageBuySellRequestService.AddRequestAndItems(requestDto);
+                      return Request.CreateResponse(HttpStatusCode.OK, "Data added successfully");
+                  }
+                  catch (Exception e)
+                  {
+                      return Request.CreateErrorResponse(HttpStatusCode.BadRequest, e.Message);
+                  }
+              }*/
 
+        /* [AdminAccess]
+         [HttpPut]
+         [Route("api/ColdStorageRequest/adminAccept/{requestId}")]
+         public HttpResponseMessage UpdateStatusAndAddItemsInColdStorage(int requestId)
+         {
+             try
+             {
+                 ManageColdStorageRequestService.UpdateStatusAndAddItemsInColdStorage(requestId);
+                 return Request.CreateResponse(HttpStatusCode.OK, "Request Accepted and Item stored in cold storage");
+             }
+             catch (Exception e)
+             {
+                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, e.Message);
+             }
+         }*/
         [AdminAccess]
         [HttpPut]
         [Route("api/ColdStorageRequest/adminAccept/{requestId}")]
-        public HttpResponseMessage UpdateStatusAndAddItemsInColdStorage(int requestId)
+        public HttpResponseMessage UpdateStatusAndAddItemsInColdStorage(int requestId, [FromBody] ColdStorageUpdateModel model)
         {
             try
             {
-                ManageColdStorageRequestService.UpdateStatusAndAddItemsInColdStorage(requestId);
+                int coldStorageId = model.ColdStorageId;
+
+                ManageColdStorageRequestService.UpdateStatusAndAddItemsInColdStorage(requestId, coldStorageId);
                 return Request.CreateResponse(HttpStatusCode.OK, "Request Accepted and Item stored in cold storage");
             }
             catch (Exception e)
