@@ -97,6 +97,7 @@
     <Compile Include="Auth\AdminAccess.cs" />
     <Compile Include="Auth\Logged.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\Trader\TransportController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -117,7 +118,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\Admin\" />
     <Folder Include="Controllers\Farmer\" />
-    <Folder Include="Controllers\Trader\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="BLL\BLL.csproj">

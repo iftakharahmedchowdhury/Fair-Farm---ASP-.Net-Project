@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.EF.Models
 {
-    public class TransportationFleetRegister
+    public class TransportationFleetRegisterDTO
     {
      
         public int Id { get; set; }

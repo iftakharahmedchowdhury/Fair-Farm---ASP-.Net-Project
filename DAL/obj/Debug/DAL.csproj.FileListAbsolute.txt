@@ -87,3 +87,18 @@ E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair-Farm---ASP-.Net
 E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.dll
 E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.pdb
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\bin\Debug\DAL.dll.config
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\bin\Debug\DAL.dll
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\bin\Debug\DAL.pdb
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\bin\Debug\EntityFramework.dll
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\bin\Debug\EntityFramework.xml
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.dll
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.pdb
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.Migrations.updatetable.resources
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.Migrations.updateing.resources

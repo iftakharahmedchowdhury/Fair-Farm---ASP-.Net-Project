@@ -1,6 +1,8 @@
 ﻿using DAL.EF.Models;
 using DAL.Interfaces;
+using DAL.Interfaces.Trader;
 using DAL.Repos;
+using DAL.Repos.Trader;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,10 +32,15 @@ namespace DAL
             return new TokenRepo();
         }
 
+
         public static IUserIdFormUname GetUserIdData()
         {
 
             return new UserRepo();
+        }
+        public static ITransport<TransportationFleetRegister,int,TransportationFleetRegister>TransportContent()
+        {
+            return new TransportRepo();
         }
     }
 }

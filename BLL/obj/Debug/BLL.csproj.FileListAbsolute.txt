@@ -96,3 +96,17 @@ E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair-Farm---ASP-.Net
 E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair-Farm---ASP-.Net-Project\BLL\obj\Debug\BLL.csproj.CopyComplete
 E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair-Farm---ASP-.Net-Project\BLL\obj\Debug\BLL.dll
 E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair-Farm---ASP-.Net-Project\BLL\obj\Debug\BLL.pdb
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\BLL\bin\Debug\BLL.dll
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\BLL\bin\Debug\BLL.pdb
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\BLL\bin\Debug\AutoMapper.dll
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\BLL\bin\Debug\DAL.dll
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\BLL\bin\Debug\EntityFramework.dll
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\BLL\bin\Debug\DAL.pdb
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\BLL\bin\Debug\DAL.dll.config
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\BLL\bin\Debug\AutoMapper.xml
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\BLL\bin\Debug\EntityFramework.xml
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\BLL\obj\Debug\BLL.csproj.CopyComplete
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\BLL\obj\Debug\BLL.dll
+E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\BLL\obj\Debug\BLL.pdb
