@@ -50,6 +50,7 @@
     <Compile Include="DTOs\BuySellRequestBetweenFarmerAndTraderDTO.cs" />
     <Compile Include="DTOs\ColdStorageItemListDTO.cs" />
     <Compile Include="DTOs\EquipmentRentDTO.cs" />
+    <Compile Include="DTOs\FarmerDTOs\UserPlantingCalenderDTO.cs" />
     <Compile Include="DTOs\FreeSeedsDistributionDTO.cs" />
     <Compile Include="DTOs\ManageColdStorageDTO.cs" />
     <Compile Include="DTOs\PlantingCalendarDTO.cs" />

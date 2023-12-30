@@ -1,6 +1,7 @@
 ﻿using DAL.EF.Models;
 using DAL.Interfaces;
 using DAL.Interfaces.Admin;
+using DAL.Interfaces.Farmer;
 using DAL.Repos;
 using DAL.Repos.Admin;
 using DAL.Repos.Farmer;
@@ -54,6 +55,12 @@ namespace DAL
             return new FarmerPlantingCalenderRepo();
         }
 
+        public static ICheckPlantingCalenderExisting<PlantingCalendar, int, string> ExistingPlantingCalenderData()
+        {
+
+            return new FarmerPlantingCalenderRepo();
+        }
+
         public static IAuth AuthData()
         {
 
@@ -64,6 +71,8 @@ namespace DAL
         {
             return new TokenRepo();
         }
+
+
 
         public static IUserIdFormUname GetUserIdData()
         {

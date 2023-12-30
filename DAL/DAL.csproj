@@ -72,6 +72,7 @@
     <Compile Include="EF\Models\TransportationFleetRent.cs" />
     <Compile Include="EF\Models\User.cs" />
     <Compile Include="Interfaces\Admin\ICropBuySellRequest.cs" />
+    <Compile Include="Interfaces\Farmer\ICheckPlantingCalenderExisting.cs" />
     <Compile Include="Interfaces\Farmer\IPlantingCalender.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Interfaces\IAuth.cs" />

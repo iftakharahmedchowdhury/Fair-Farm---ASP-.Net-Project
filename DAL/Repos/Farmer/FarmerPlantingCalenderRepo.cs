@@ -1,5 +1,6 @@
 ﻿using DAL.EF.Models;
 using DAL.Interfaces;
+using DAL.Interfaces.Farmer;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos.Farmer
 {
-    internal class FarmerPlantingCalenderRepo : Repo, IRepo<PlantingCalendar, int, PlantingCalendar>
+    internal class FarmerPlantingCalenderRepo : Repo, IRepo<PlantingCalendar, int, PlantingCalendar>, ICheckPlantingCalenderExisting<PlantingCalendar,int,string>
     {
         public PlantingCalendar Add(PlantingCalendar obj)
         {
@@ -40,11 +41,39 @@ namespace DAL.Repos.Farmer
             return db.PlantingCalendars.FirstOrDefault(i => i.Id == id);
         }
 
+        public PlantingCalendar Get(int id, string itm1, string itm2, string itm3)
+        {
+            
+           return db.PlantingCalendars.FirstOrDefault(i => i.FarmerUserId == id && i.SeasonName == itm1 && i.SeasonalYear == itm2 && i.CropsName == itm3);
+
+            
+        }
+
         public PlantingCalendar Update(PlantingCalendar obj)
         {
-            db.Entry(obj).State = EntityState.Modified;
-            db.SaveChanges();
-            return obj;
+            var existingEntity = db.Set<PlantingCalendar>().Find(obj.Id); 
+
+            if (existingEntity != null)
+            {
+                var type = typeof(PlantingCalendar);
+                var properties = type.GetProperties();
+
+                foreach (var property in properties)
+                {
+                    var newValue = property.GetValue(obj);
+                    if (newValue != null)
+                    {
+                        property.SetValue(existingEntity, newValue);
+                    }
+                }
+
+                db.SaveChanges();
+                return existingEntity;
+            }
+
+            return null; 
         }
+
+
     }
 }
