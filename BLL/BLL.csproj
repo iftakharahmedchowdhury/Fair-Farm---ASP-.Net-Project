@@ -71,6 +71,7 @@
     <Compile Include="Services\Admin\ManageColdStorageService.cs" />
     <Compile Include="Services\Admin\ManageRegularPriceUpdateService.cs" />
     <Compile Include="Services\Admin\ManageTraningService.cs" />
+    <Compile Include="Services\Admin\PreviousPriceDataService.cs" />
     <Compile Include="Services\AuthServices.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>

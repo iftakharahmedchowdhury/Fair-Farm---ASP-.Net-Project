@@ -100,8 +100,9 @@ namespace BLL.Services.Admin
         {
             return DataAccessFactory.RegularPriceData().Delete(id);
         }
-      
+
+
     }
 
-   
+
 }
