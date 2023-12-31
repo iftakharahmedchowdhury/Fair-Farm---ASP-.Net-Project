@@ -1,4 +1,5 @@
 ﻿using BLL.DTOs;
+using BLL.Services;
 using BLL.Services.Admin;
 using Fair_Farm.Auth;
 using System;
@@ -10,16 +11,17 @@ using System.Web.Http;
 
 namespace Fair_Farm.Controllers.Admin
 {
-    public class ManageRegularPriceUpdateController : ApiController
+    public class FreeSeedsDistributionManagementController : ApiController
     {
         [Logged]
+
         [HttpGet]
-        [Route("api/RegularPrice/all")]
+        [Route("api/freeSeeds/all")]
         public HttpResponseMessage All()
         {
             try
             {
-                var data = ManageRegularPriceUpdateService.Get();
+                var data = FreeSeedsDistributionManagementService.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
 
             }
@@ -29,19 +31,19 @@ namespace Fair_Farm.Controllers.Admin
 
             }
         }
-        [AdminAccess]
+
         [HttpPost]
-        [Route("api/RegularPrice/create")]
-        public HttpResponseMessage Create(RegularPriceUpdateDTO s)
+        [Route("api/freeSeeds/create")]
+        public HttpResponseMessage Create(FreeSeedsDistributionDTO s)
         {
             try
             {
-                var data = ManageRegularPriceUpdateService.Add(s);
+                var data = FreeSeedsDistributionManagementService.Add(s);
                 if (data == null)
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Regular price not created" });
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Free seeds request not created " });
                 }
-                return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Regular Price created" });
+                return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Free seeds Request created" });
 
 
             }
@@ -51,15 +53,14 @@ namespace Fair_Farm.Controllers.Admin
 
             }
         }
-
         [Logged]
         [HttpGet]
-        [Route("api/RegularPrice/{id}")]
-        public HttpResponseMessage GetRegularPriceById(int id)
+        [Route("api/freeSeeds/{id}")]
+        public HttpResponseMessage GetFreeSeedRequestById(int id)
         {
             try
             {
-                var data = ManageRegularPriceUpdateService.Get(id);
+                var data = FreeSeedsDistributionManagementService.Get(id);
 
                 if (data != null)
                 {
@@ -67,7 +68,7 @@ namespace Fair_Farm.Controllers.Admin
                 }
                 else
                 {
-                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Item not found" });
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Seed Request not found" });
                 }
             }
             catch (Exception e)
@@ -78,19 +79,19 @@ namespace Fair_Farm.Controllers.Admin
 
         [Logged]
         [HttpPut]
-        [Route("api/RegularPrice/{id}")]
-        public HttpResponseMessage UpdateRegularPrice(RegularPriceUpdateDTO price)
+        [Route("api/freeSeeds/{id}")]
+        public HttpResponseMessage UpdateFreeSeedsRequest(FreeSeedsDistributionDTO fs)
         {
             try
             {
-                var data = ManageRegularPriceUpdateService.Update(price);
-                if (data != null)
+                var updatedUser = FreeSeedsDistributionManagementService.Update(fs);
+                if (updatedUser != null)
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Price updated " });
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Free seeds request updated " });
                 }
                 else
                 {
-                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "item not found" });
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Free seeds Request not found" });
                 }
             }
             catch (Exception e)
@@ -101,19 +102,19 @@ namespace Fair_Farm.Controllers.Admin
 
         [AdminAccess]
         [HttpDelete]
-        [Route("api/RegularPrice/{id}")]
-        public HttpResponseMessage DeleteRegularPrice(int id)
+        [Route("api/freeSeeds/delete/{id}")]
+        public HttpResponseMessage DeleteFreeSeedsRequest(int id)
         {
             try
             {
-                var isDeleted = ManageRegularPriceUpdateService.Delete(id);
+                var isDeleted = FreeSeedsDistributionManagementService.Delete(id);
                 if (isDeleted)
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Regular price deleted successfully" });
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Free seeds request deleted successfully" });
                 }
                 else
                 {
-                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "item not found" });
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Free seeds request not found" });
                 }
             }
             catch (Exception e)
@@ -121,9 +122,6 @@ namespace Fair_Farm.Controllers.Admin
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, e.Message);
             }
         }
-
-
-
 
     }
 }

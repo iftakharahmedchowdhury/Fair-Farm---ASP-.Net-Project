@@ -9,26 +9,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
-namespace BLL.Services
+namespace BLL.Services.Admin
 {
-    public class UserService
+    public class ManageColdStorageService
     {
-        public static List<UserDTO> Get()
+        public static List<ManageColdStorageDTO> Get()
         {
-            var data = DataAccessFactory.UserData().Get();
+            var data = DataAccessFactory.ColdStorageData().Get();
             /*var data = CourseRepo.Get();*/
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<User, UserDTO>();
+                cfg.CreateMap<ManageColdStorage, ManageColdStorageDTO>();
             });
             var mapper = new Mapper(config);
-            return mapper.Map<List<UserDTO>>(data);
+            return mapper.Map<List<ManageColdStorageDTO>>(data);
         }
 
-       
-        public static UserDTO Add(UserDTO c)
+        public static ManageColdStorageDTO Add(ManageColdStorageDTO c)
         {
             var validationResults = new List<ValidationResult>();
             var context = new System.ComponentModel.DataAnnotations.ValidationContext(c, serviceProvider: null, items: null);
@@ -42,79 +39,72 @@ namespace BLL.Services
 
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<UserDTO, User>();
+                cfg.CreateMap<ManageColdStorageDTO, ManageColdStorage>();
             });
             var mapper = new Mapper(config);
-            var data = mapper.Map<User>(c);
-            var x = DataAccessFactory.UserData().Add(data);
+            var data = mapper.Map<ManageColdStorage>(c);
+            var x = DataAccessFactory.ColdStorageData().Add(data);
 
             var config2 = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<User, UserDTO>();
+                cfg.CreateMap<ManageColdStorage, ManageColdStorageDTO>();
             });
             var mapper2 = new Mapper(config2);
-            var data2 = mapper2.Map<UserDTO>(x);
+            var data2 = mapper2.Map<ManageColdStorageDTO>(x);
 
             return data2;
         }
 
-
-       
-
-        public static UserDTO Get(int id)
+        public static ManageColdStorageDTO Get(int id)
         {
-            var data = DataAccessFactory.UserData().Get(id);
+            var data = DataAccessFactory.ColdStorageData().Get(id);
 
             if (data != null)
             {
                 var config = new MapperConfiguration(cfg =>
                 {
-                    cfg.CreateMap<User, UserDTO>();
+                    cfg.CreateMap<ManageColdStorage, ManageColdStorageDTO>();
                 });
                 var mapper = new Mapper(config);
-                return mapper.Map<UserDTO>(data);
+                return mapper.Map<ManageColdStorageDTO>(data);
             }
 
             return null;
         }
 
-        public static UserDTO Update(UserDTO user)
+        public static ManageColdStorageDTO Update(ManageColdStorageDTO tr)
         {
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<UserDTO, User>();
+                cfg.CreateMap<ManageColdStorageDTO, ManageColdStorage>();
             });
             var mapper = new Mapper(config);
-            var userData = mapper.Map<User>(user);
+            var ColdStorageData = mapper.Map<ManageColdStorage>(tr);
 
-            var updatedUserData = DataAccessFactory.UserData().Update(userData);
+            var updatedColdStorageData = DataAccessFactory.ColdStorageData().Update(ColdStorageData);
 
             var config2 = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<User, UserDTO>();
+                cfg.CreateMap<ManageColdStorage, ManageColdStorageDTO>();
             });
             var mapper2 = new Mapper(config2);
-            var updatedUserDTO = mapper2.Map<UserDTO>(updatedUserData);
+            var updatedTrainingDTO = mapper2.Map<ManageColdStorageDTO>(updatedColdStorageData);
 
-            return updatedUserDTO;
+            return updatedTrainingDTO;
         }
 
         public static bool Delete(int id)
         {
-            var UserData = DataAccessFactory.UserData().Get(id);
+            var ColdStorageData = DataAccessFactory.ColdStorageData().Get(id);
 
-            if (UserData != null)
+            if (ColdStorageData != null)
             {
-                var isDeleted = DataAccessFactory.UserData().Delete(id);
+                var isDeleted = DataAccessFactory.ColdStorageData().Delete(id);
 
                 return isDeleted;
             }
 
             return false;
         }
-
-
-
     }
-
 }

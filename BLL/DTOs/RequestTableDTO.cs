@@ -27,5 +27,6 @@ namespace BLL.DTOs
 
 
         public List<RequestTableItemDTO> RequestItems { get; set; }
+        public List<ColdStorageItemListDTO> ColdStorageRequestItems { get; set; }
     }
 }

@@ -10,16 +10,17 @@ using System.Web.Http;
 
 namespace Fair_Farm.Controllers.Admin
 {
-    public class ManageRegularPriceUpdateController : ApiController
+    public class ManageColdStorageController : ApiController
     {
         [Logged]
+
         [HttpGet]
-        [Route("api/RegularPrice/all")]
+        [Route("api/coldstorage/all")]
         public HttpResponseMessage All()
         {
             try
             {
-                var data = ManageRegularPriceUpdateService.Get();
+                var data = ManageColdStorageService.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
 
             }
@@ -31,17 +32,17 @@ namespace Fair_Farm.Controllers.Admin
         }
         [AdminAccess]
         [HttpPost]
-        [Route("api/RegularPrice/create")]
-        public HttpResponseMessage Create(RegularPriceUpdateDTO s)
+        [Route("api/coldstorage/create")]
+        public HttpResponseMessage Create(ManageColdStorageDTO s)
         {
             try
             {
-                var data = ManageRegularPriceUpdateService.Add(s);
+                var data = ManageColdStorageService.Add(s);
                 if (data == null)
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Regular price not created" });
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Cold Storage not created " });
                 }
-                return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Regular Price created" });
+                return Request.CreateResponse(HttpStatusCode.OK, new { Message = "ColdStorage created" });
 
 
             }
@@ -51,15 +52,14 @@ namespace Fair_Farm.Controllers.Admin
 
             }
         }
-
-        [Logged]
+        [AdminAccess]
         [HttpGet]
-        [Route("api/RegularPrice/{id}")]
-        public HttpResponseMessage GetRegularPriceById(int id)
+        [Route("api/coldstorage/{id}")]
+        public HttpResponseMessage GetColdStorageById(int id)
         {
             try
             {
-                var data = ManageRegularPriceUpdateService.Get(id);
+                var data = ManageColdStorageService.Get(id);
 
                 if (data != null)
                 {
@@ -67,7 +67,7 @@ namespace Fair_Farm.Controllers.Admin
                 }
                 else
                 {
-                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Item not found" });
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "ColdStorage not found" });
                 }
             }
             catch (Exception e)
@@ -76,21 +76,21 @@ namespace Fair_Farm.Controllers.Admin
             }
         }
 
-        [Logged]
+        [AdminAccess]
         [HttpPut]
-        [Route("api/RegularPrice/{id}")]
-        public HttpResponseMessage UpdateRegularPrice(RegularPriceUpdateDTO price)
+        [Route("api/coldstorage/{id}")]
+        public HttpResponseMessage UpdateColdStorage(ManageColdStorageDTO tr)
         {
             try
             {
-                var data = ManageRegularPriceUpdateService.Update(price);
-                if (data != null)
+                var updatedUser = ManageColdStorageService.Update(tr);
+                if (updatedUser != null)
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Price updated " });
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Cold storage updated " });
                 }
                 else
                 {
-                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "item not found" });
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Cold storage not found" });
                 }
             }
             catch (Exception e)
@@ -101,19 +101,19 @@ namespace Fair_Farm.Controllers.Admin
 
         [AdminAccess]
         [HttpDelete]
-        [Route("api/RegularPrice/{id}")]
-        public HttpResponseMessage DeleteRegularPrice(int id)
+        [Route("api/coldstorage/delete/{id}")]
+        public HttpResponseMessage DeleteColdStorage(int id)
         {
             try
             {
-                var isDeleted = ManageRegularPriceUpdateService.Delete(id);
+                var isDeleted = ManageColdStorageService.Delete(id);
                 if (isDeleted)
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Regular price deleted successfully" });
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Cold storage deleted successfully" });
                 }
                 else
                 {
-                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "item not found" });
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Cold storage not found" });
                 }
             }
             catch (Exception e)
@@ -121,9 +121,5 @@ namespace Fair_Farm.Controllers.Admin
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, e.Message);
             }
         }
-
-
-
-
     }
 }

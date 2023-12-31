@@ -21,7 +21,7 @@ namespace DAL.EF.Models
         [Required]
         public DateTime Date { get; set; }
         [Required]
-        public decimal Location { get; set; }
+        public string Location { get; set; }
 
         [Required]
         public string Region { get; set; }

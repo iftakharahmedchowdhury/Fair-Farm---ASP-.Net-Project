@@ -10,16 +10,18 @@ using System.Web.Http;
 
 namespace Fair_Farm.Controllers.Admin
 {
-    public class ManageRegularPriceUpdateController : ApiController
+    public class ManageTraningController : ApiController
     {
+
         [Logged]
+
         [HttpGet]
-        [Route("api/RegularPrice/all")]
+        [Route("api/training/all")]
         public HttpResponseMessage All()
         {
             try
             {
-                var data = ManageRegularPriceUpdateService.Get();
+                var data = ManageTraningService.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
 
             }
@@ -31,17 +33,17 @@ namespace Fair_Farm.Controllers.Admin
         }
         [AdminAccess]
         [HttpPost]
-        [Route("api/RegularPrice/create")]
-        public HttpResponseMessage Create(RegularPriceUpdateDTO s)
+        [Route("api/training/create")]
+        public HttpResponseMessage Create(TrainingTableDTO s)
         {
             try
             {
-                var data = ManageRegularPriceUpdateService.Add(s);
+                var data = ManageTraningService.Add(s);
                 if (data == null)
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Regular price not created" });
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Training not created " });
                 }
-                return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Regular Price created" });
+                return Request.CreateResponse(HttpStatusCode.OK, new { Message = "User created" });
 
 
             }
@@ -51,15 +53,14 @@ namespace Fair_Farm.Controllers.Admin
 
             }
         }
-
-        [Logged]
+        [AdminAccess]
         [HttpGet]
-        [Route("api/RegularPrice/{id}")]
-        public HttpResponseMessage GetRegularPriceById(int id)
+        [Route("api/training/{id}")]
+        public HttpResponseMessage GetTrainingById(int id)
         {
             try
             {
-                var data = ManageRegularPriceUpdateService.Get(id);
+                var data = ManageTraningService.Get(id);
 
                 if (data != null)
                 {
@@ -67,7 +68,7 @@ namespace Fair_Farm.Controllers.Admin
                 }
                 else
                 {
-                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Item not found" });
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Training not found" });
                 }
             }
             catch (Exception e)
@@ -76,21 +77,21 @@ namespace Fair_Farm.Controllers.Admin
             }
         }
 
-        [Logged]
+        [AdminAccess]
         [HttpPut]
-        [Route("api/RegularPrice/{id}")]
-        public HttpResponseMessage UpdateRegularPrice(RegularPriceUpdateDTO price)
+        [Route("api/training/{id}")]
+        public HttpResponseMessage UpdateTraining(TrainingTableDTO tr)
         {
             try
             {
-                var data = ManageRegularPriceUpdateService.Update(price);
-                if (data != null)
+                var updatedUser = ManageTraningService.Update(tr);
+                if (updatedUser != null)
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Price updated " });
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Traing updated " });
                 }
                 else
                 {
-                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "item not found" });
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Training not found" });
                 }
             }
             catch (Exception e)
@@ -101,19 +102,19 @@ namespace Fair_Farm.Controllers.Admin
 
         [AdminAccess]
         [HttpDelete]
-        [Route("api/RegularPrice/{id}")]
-        public HttpResponseMessage DeleteRegularPrice(int id)
+        [Route("api/training/delete/{id}")]
+        public HttpResponseMessage DeleteTraining(int id)
         {
             try
             {
-                var isDeleted = ManageRegularPriceUpdateService.Delete(id);
+                var isDeleted = ManageTraningService.Delete(id);
                 if (isDeleted)
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Regular price deleted successfully" });
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Training deleted successfully" });
                 }
                 else
                 {
-                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "item not found" });
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Training not found" });
                 }
             }
             catch (Exception e)
@@ -121,9 +122,6 @@ namespace Fair_Farm.Controllers.Admin
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, e.Message);
             }
         }
-
-
-
 
     }
 }
