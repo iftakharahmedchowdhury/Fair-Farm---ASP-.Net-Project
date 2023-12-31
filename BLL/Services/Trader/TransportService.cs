@@ -12,14 +12,14 @@ namespace BLL.Services.Trader
     {
         public static List<TransportationFleetRegisterDTO> GetAll()
         {
-            var data = DataAccessFactory.TransportContent().GetAll();
+            var data = DataAccessFactoryTrader.TransportContent().GetAll();
             return Convert(data);
         }
 
         public static int Add(TransportationFleetRegisterDTO data)
         {
             var value=Convert(data);
-            return DataAccessFactory.TransportContent().Add(value); 
+            return DataAccessFactoryTrader.TransportContent().Add(value); 
         }
         private static List<TransportationFleetRegisterDTO> Convert(List<TransportationFleetRegister> data)
         {
