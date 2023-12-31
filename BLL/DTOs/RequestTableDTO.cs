@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.EF.Models
+namespace BLL.DTOs
 {
-    public class RequestTable
+    public class RequestTableDTO
     {
        
         public int Id { get; set; }
@@ -24,6 +24,9 @@ namespace DAL.EF.Models
 
 
         public int UserId { get; set; }
- 
+
+
+        public List<RequestTableItemDTO> RequestItems { get; set; }
+        public List<ColdStorageItemListDTO> ColdStorageRequestItems { get; set; }
     }
 }

@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.EF.Models
+namespace BLL.DTOs
 {
-    public class PlantingCalendar
+    public class PlantingCalendarDTO
     {
     
         public int Id { get; set; }
