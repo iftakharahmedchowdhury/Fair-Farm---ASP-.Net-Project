@@ -49,18 +49,7 @@ namespace DAL
 
             return new ManageRegularPriceUpdateRepo();
         }
-        public static IRepo<PlantingCalendar, int, PlantingCalendar> PlantingCalenderData()
-        {
-
-            return new FarmerPlantingCalenderRepo();
-        }
-
-        public static ICheckPlantingCalenderExisting<PlantingCalendar, int, string> ExistingPlantingCalenderData()
-        {
-
-            return new FarmerPlantingCalenderRepo();
-        }
-
+        
         public static IAuth AuthData()
         {
 

@@ -50,6 +50,7 @@
     <Compile Include="DTOs\BuySellRequestBetweenFarmerAndTraderDTO.cs" />
     <Compile Include="DTOs\ColdStorageItemListDTO.cs" />
     <Compile Include="DTOs\EquipmentRentDTO.cs" />
+    <Compile Include="DTOs\FarmerDTOs\FarmerEquipmentRentDTO.cs" />
     <Compile Include="DTOs\FarmerDTOs\UserPlantingCalenderDTO.cs" />
     <Compile Include="DTOs\FreeSeedsDistributionDTO.cs" />
     <Compile Include="DTOs\ManageColdStorageDTO.cs" />
@@ -68,7 +69,14 @@
     <Compile Include="Services\Admin\ManageBuySellRequestService.cs" />
     <Compile Include="Services\Admin\ManageRegularPriceUpdateService.cs" />
     <Compile Include="Services\AuthServices.cs" />
+    <Compile Include="Services\Farmer\FarmerAccessRedListService.cs" />
+    <Compile Include="Services\Farmer\FarmerEqupmentRentService.cs" />
     <Compile Include="Services\Farmer\FarmerPlantingCalenderService.cs" />
+    <Compile Include="Services\Farmer\FarmerPreviousPriceService.cs" />
+    <Compile Include="Services\Farmer\FarmerRegularPriceService.cs" />
+    <Compile Include="Services\Farmer\FarmerTrainingServices.cs" />
+    <Compile Include="Services\Farmer\FarmerTransportationFleetRentService.cs" />
+    <Compile Include="Services\Farmer\FarmerTransportationFleetSeeService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>

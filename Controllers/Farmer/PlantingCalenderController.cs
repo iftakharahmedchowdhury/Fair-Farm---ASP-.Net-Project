@@ -144,7 +144,7 @@ namespace Fair_Farm.Controllers.Farmer
         /*[Logged]*/
         [HttpGet]
         [Route("api/PlantingCalender/{id}/mycrops")]
-        public HttpResponseMessage PostComments(int id)
+        public HttpResponseMessage UserWithCalenderCrops(int id)
         {
             try
             {
