@@ -59,12 +59,15 @@
     <Compile Include="DTOs\RequestTableItemDTO.cs" />
     <Compile Include="DTOs\StoredItemInColdStorageDTO.cs" />
     <Compile Include="DTOs\TokenDTO.cs" />
+    <Compile Include="DTOs\TraderDTO\RequestTableDTO.cs" />
     <Compile Include="DTOs\TrainingTableDTO.cs" />
     <Compile Include="DTOs\TransportationFleetRegisterDTO.cs" />
     <Compile Include="DTOs\TransportationFleetRentDTO.cs" />
     <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AuthServices.cs" />
+    <Compile Include="Services\Trader\ColdStorageService.cs" />
+    <Compile Include="Services\Trader\CropsOrderService.cs" />
     <Compile Include="Services\Trader\TransportService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>

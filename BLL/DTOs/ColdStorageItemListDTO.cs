@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.EF.Models
 {
-    public class ColdStorageItemList
+    public class ColdStorageItemListDTO
     {
 
         public int Id { get; set; }

@@ -74,6 +74,8 @@
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IUserIdFormUname.cs" />
+    <Compile Include="Interfaces\Trader\IColdStorageRequest.cs" />
+    <Compile Include="Interfaces\Trader\ICropsOrder.cs" />
     <Compile Include="Interfaces\Trader\ITransport.cs" />
     <Compile Include="Migrations\202312300801271_updatetable.cs" />
     <Compile Include="Migrations\202312300801271_updatetable.designer.cs">
@@ -88,6 +90,9 @@
     <Compile Include="Repos\Admin\ManageBuySellRequestRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
+    <Compile Include="Repos\Trader\ColdStorageRepo.cs" />
+    <Compile Include="Repos\Trader\CropsOrderRepo.cs" />
+    <Compile Include="Repos\Trader\CropsRequestTableRepo.cs" />
     <Compile Include="Repos\Trader\TransportRepo.cs" />
     <Compile Include="Repos\UserRepo.cs" />
   </ItemGroup>

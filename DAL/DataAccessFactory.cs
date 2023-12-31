@@ -2,6 +2,7 @@
 using DAL.Interfaces;
 using DAL.Interfaces.Trader;
 using DAL.Repos;
+using DAL.Repos.Admin;
 using DAL.Repos.Trader;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,24 @@ namespace DAL
         public static ITransport<TransportationFleetRegister,int,TransportationFleetRegister>TransportContent()
         {
             return new TransportRepo();
+        }
+
+        public static ICropsOrder<RequestTableItem, int, RequestTableItem> RequestTableItemData()
+        {
+
+            return new CropsOrderRepo();
+        }
+        public static ICropsOrder<RequestTable, int, RequestTable> RequestTableData()
+        {
+
+            return new CropsRequestTableRepo();
+        }
+
+
+        public static IColdStorageRequest<ColdStorageItemList, int, ColdStorageItemList> ColdStorageItemListData()
+        {
+
+           return new ColdStorageRepo();
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.EF.Models
 {
-    public class RequestTableItem
+    public class RequestTableItemDTO
     {
      
         public int Id { get; set; }
