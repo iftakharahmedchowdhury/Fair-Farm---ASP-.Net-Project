@@ -217,7 +217,7 @@ namespace Fair_Farm.Controllers.Farmer
         /*[Logged]*/
         /*[FarmerAccess]*/
         [HttpPut]
-        [Route("api/equipmentrent/{id}/{ownerid}/farmer")]
+        [Route("api/equipmentrentfarmer/{id}/{ownerid}")]
         public HttpResponseMessage UpdateMyEquipments(int id, int ownerid, EquipmentRentDTO s)
         {
             try
@@ -266,7 +266,7 @@ namespace Fair_Farm.Controllers.Farmer
         /*[Logged]*/
         /*[FarmerAccess]*/
         [HttpDelete]
-        [Route("api/equipmentrent/{id}/{ownerid}")]
+        [Route("api/equipmentrentdelete/{id}/{ownerid}")]
         public HttpResponseMessage DeletePlantingCalender(int id, int ownerid)
         {
             try
@@ -302,7 +302,7 @@ namespace Fair_Farm.Controllers.Farmer
 
         /*[Logged]*/
         [HttpGet]
-        [Route("api/equipmentrent/{id}/myhitory")]
+        [Route("api/equipmentrentmyhitory/{id}")]
         public HttpResponseMessage UserRentRelatedHistory(int id)
         {
             try

@@ -187,7 +187,7 @@ namespace BLL.Services.Farmer
 
             var checkownerexists = DataAccessFactory.UserData().Get(ownerid);
             var checkequpment = FarmerDataAccessFactory.FarmerEquipmentRentData().Get(id);
-            var renter = DataAccessFactory.UserData().Get(checkequpment.RenterUserId);
+            //var renter = DataAccessFactory.UserData().Get(checkequpment.RenterUserId);
             if (checkownerexists == null)
             {
                 throw new Exception("You are not a Registered User in the System.");
