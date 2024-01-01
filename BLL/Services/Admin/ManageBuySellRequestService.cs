@@ -128,6 +128,85 @@ namespace BLL.Services
             }
         }
 
+        /*Admin will sell to trader start*/
+        public static void UpdateStatusAndSellItems(int requestId)
+        {
+            var request = DataAccessFactory.RequestCropData().Get(requestId);
+
+            if (request != null && request.RequestType == "Buy")
+            {
+                request.Status = "Sold";
+                DataAccessFactory.RequestCropData().Update(request);
+
+                var requestItems = DataAccessFactory.RequestTableItemData().GetItem(requestId);
+
+                foreach (var item in requestItems)
+                {
+
+                    DeductSoldQuantityFromRegularPrice(item.CropsName, item.CropsQuantity);
+                }
+            }
+        }
+
+        private static void DeductSoldQuantityFromRegularPrice(string cropName, string soldQuantityStr)
+        {
+            if (int.TryParse(soldQuantityStr, out int soldQuantity))
+            {
+               
+                var regularPriceItem = DataAccessFactory.RegularPriceNameData().Get(cropName);
+
+                if (regularPriceItem != null)
+                {
+                    decimal oldCropQuantity = regularPriceItem.CropQuantity;
+
+
+                    regularPriceItem.CropQuantity -= soldQuantity;
+                    regularPriceItem.Price = (((regularPriceItem.Price / oldCropQuantity)) * regularPriceItem.CropQuantity);
+
+                    DataAccessFactory.RegularPriceData().Update(regularPriceItem);
+                }
+              
+                else
+                {
+                  
+                }
+            }
+            else
+            {
+                
+            }
+        }
+        /*Admin will sell to trader end*/
+
+        public static void UpdateStatusAndSendToFarmer(int requestId)
+        {
+            var request = DataAccessFactory.RequestCropData().Get(requestId);
+
+            if (request != null && request.RequestType == "Buy")
+            {
+                request.Status = "NotSellRefere";
+                DataAccessFactory.RequestCropData().Update(request);
+
+                var requestItems = DataAccessFactory.RequestTableItemData().GetItem(requestId);
+
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<RequestTableItem, BuySellRequestBetweenFarmerAndTrader>());
+                var mapper = new Mapper(config);
+
+                foreach (var item in requestItems)
+                {
+                    var buySellRequestItem = mapper.Map<BuySellRequestBetweenFarmerAndTrader>(item);
+                    buySellRequestItem.RequestId = requestId;
+                    buySellRequestItem.Userid = request.UserId;
+                    buySellRequestItem.RequestType = request.RequestType;
+                    buySellRequestItem.Status = request.Status;
+
+                    DataAccessFactory.BuySellRequestBetweenFarmerAndTraderData().Add(buySellRequestItem);
+                }
+            }
+        }
+
+
+
 
     }
 }
