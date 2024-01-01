@@ -100,6 +100,7 @@
     <Compile Include="Repos\Admin\ManageRegularPriceUpdateRepo.cs" />
     <Compile Include="Repos\Farmer\FarmerAccesstoRedListRepo.cs" />
     <Compile Include="Repos\Farmer\FarmerEqupmentRentRepo.cs" />
+    <Compile Include="Repos\Farmer\FarmerFreeSeedDistributionRepo.cs" />
     <Compile Include="Repos\Farmer\FarmerPlantingCalenderRepo.cs" />
     <Compile Include="Repos\Farmer\FarmerPreviousPriceRepo.cs" />
     <Compile Include="Repos\Farmer\FarmerRegisteredTransportationFleetRepo.cs" />

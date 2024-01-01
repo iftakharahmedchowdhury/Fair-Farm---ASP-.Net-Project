@@ -59,5 +59,10 @@ namespace DAL
 
             return new FarmerPreviousPriceRepo();
         }
+        public static ISeeTransportationFleet<FreeSeedsDistribution, int, string> FarmerFreeSeedDistributionData()
+        {
+
+            return new FarmerFreeSeedDistributionRepo();
+        }
     }
 }

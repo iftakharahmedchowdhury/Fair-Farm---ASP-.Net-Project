@@ -37,7 +37,7 @@ namespace Fair_Farm.Controllers.Farmer
 
         /*[Logged]*/
         [HttpGet]
-        [Route("api/transportationfleetseeregions/{regions}/regions")]
+        [Route("api/transportationfleetseeregionsregions/{regions}")]
         public HttpResponseMessage GetTransportationFleetseeByRegionTransportFarmer(string regions)
         {
             try

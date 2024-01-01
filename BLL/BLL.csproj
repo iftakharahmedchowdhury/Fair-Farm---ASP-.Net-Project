@@ -71,6 +71,7 @@
     <Compile Include="Services\AuthServices.cs" />
     <Compile Include="Services\Farmer\FarmerAccessRedListService.cs" />
     <Compile Include="Services\Farmer\FarmerEqupmentRentService.cs" />
+    <Compile Include="Services\Farmer\FarmerFreeSeedDistributionService.cs" />
     <Compile Include="Services\Farmer\FarmerPlantingCalenderService.cs" />
     <Compile Include="Services\Farmer\FarmerPreviousPriceService.cs" />
     <Compile Include="Services\Farmer\FarmerRegularPriceService.cs" />
