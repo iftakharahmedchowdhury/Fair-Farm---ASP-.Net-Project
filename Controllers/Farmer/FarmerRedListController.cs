@@ -36,7 +36,7 @@ namespace Fair_Farm.Controllers.Farmer
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, e.Message);
             }
         }
-        /*[Logged]*/
+        /*[Logged]* /
         [HttpGet]
         [Route("api/farmeraccessredlistedsingleuserbyid/{id}/{type}")]
         public HttpResponseMessage GetRedListedSingleUsersbyFarmer(int id, string type)
