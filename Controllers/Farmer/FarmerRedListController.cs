@@ -39,7 +39,7 @@ namespace Fair_Farm.Controllers.Farmer
         /*[Logged]*/
         [HttpGet]
         [Route("api/farmeraccessredlistedsingleuserbyid/{id}/{type}")]
-        public HttpResponseMessage GetRedListedSingleUsersbyFarmer(int id, string type)
+        public HttpResponseMessage GetRedListedSingleUsersbyFarmer(int id, string type )
         {
             try
             {
