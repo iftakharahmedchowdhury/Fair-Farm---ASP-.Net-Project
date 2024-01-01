@@ -31,7 +31,7 @@ namespace BLL.Services.Trader
             foreach (var requestItem in requestItems)
             {
                 requestItem.RequestId = addedRequest.Id;
-                DataAccessFactory.RequestTableItemData().Add(requestItem);
+                DataAccessFactoryTrader.RequestTableItemData().Add(requestItem);
 
             }
         }

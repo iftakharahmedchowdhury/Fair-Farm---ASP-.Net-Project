@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos.Trader
 {
-    internal class ColdStorageRepo : Repo, ICropsOrder<ColdStorageItemList, int, ColdStorageItemList>
+    internal class ColdStorageRepo : Repo,ICropsOrder<ColdStorageItemList, int, ColdStorageItemList>
     {
         public ColdStorageItemList Add(ColdStorageItemList obj)
         {
