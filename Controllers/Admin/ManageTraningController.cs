@@ -43,7 +43,7 @@ namespace Fair_Farm.Controllers.Admin
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Training not created " });
                 }
-                return Request.CreateResponse(HttpStatusCode.OK, new { Message = "User created" });
+                return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Training created" });
 
 
             }

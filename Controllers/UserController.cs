@@ -7,14 +7,16 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Fair_Farm.Controllers
 {
+    [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
     public class UserController : ApiController
     {
 
         [AdminAccess]
-       
+
         [HttpGet]
         [Route("api/users/all")]
         public HttpResponseMessage All()
@@ -53,7 +55,7 @@ namespace Fair_Farm.Controllers
 
             }
         }
-        [AdminAccess] 
+        [Logged]
         [HttpGet]
         [Route("api/users/{id}")]
         public HttpResponseMessage GetUserById(int id)
@@ -77,7 +79,7 @@ namespace Fair_Farm.Controllers
             }
         }
 
-        [Logged]
+        [AdminAccess]
         [HttpPut]
         [Route("api/users/{id}")]
         public HttpResponseMessage UpdateUser(UserDTO user)

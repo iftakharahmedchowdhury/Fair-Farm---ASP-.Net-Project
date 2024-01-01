@@ -7,9 +7,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Fair_Farm.Controllers
 {
+    [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
     public class AuthController : ApiController
     {
         [HttpPost]
@@ -56,7 +58,7 @@ namespace Fair_Farm.Controllers
              }*/
 
 
-        [Logged] // Ensure this attribute checks for authentication
+        [Logged] 
         [HttpGet]
         [Route("api/auth/logout")]
         public HttpResponseMessage Logout()
@@ -82,7 +84,7 @@ namespace Fair_Farm.Controllers
 
         /**/
 
-        [Logged] // Ensure this attribute checks for authentication
+        [Logged] 
         [HttpGet]
         [Route("api/auth/validate")]
         public HttpResponseMessage ValidateToken()
@@ -99,7 +101,7 @@ namespace Fair_Farm.Controllers
             }
         }
 
-        [Logged] // Ensure this attribute checks for authentication
+        [Logged] 
         [HttpGet]
         [Route("api/auth/isadmin")]
         public HttpResponseMessage IsAdmin()
