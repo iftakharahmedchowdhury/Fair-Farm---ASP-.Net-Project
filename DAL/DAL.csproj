@@ -81,6 +81,7 @@
     <Compile Include="Interfaces\IUserIdFormUname.cs" />
     <Compile Include="Interfaces\Trader\IColdStorageRequest.cs" />
     <Compile Include="Interfaces\Trader\ICropsOrder.cs" />
+    <Compile Include="Interfaces\Trader\ITraderShowRedList.cs" />
     <Compile Include="Interfaces\Trader\ITraderRent.cs" />
     <Compile Include="Interfaces\Trader\IShowDetails.cs" />
     <Compile Include="Interfaces\Trader\ITransport.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Repos\Trader\ColdStorageRepo.cs" />
     <Compile Include="Repos\Trader\CropsOrderRepo.cs" />
     <Compile Include="Repos\Trader\CropsRequestTableRepo.cs" />
+    <Compile Include="Repos\Trader\TraderShowRedListRepo.cs" />
     <Compile Include="Repos\Trader\TransportRepo.cs" />
     <Compile Include="Repos\UserRepo.cs" />
   </ItemGroup>

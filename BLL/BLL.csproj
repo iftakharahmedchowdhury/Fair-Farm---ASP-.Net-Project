@@ -77,6 +77,7 @@
     <Compile Include="Services\Trader\ColdStorageService.cs" />
     <Compile Include="Services\Trader\CropsOrderService.cs" />
     <Compile Include="Services\Trader\TraderEqupmentRentService.cs" />
+    <Compile Include="Services\Trader\TraderShowRedListService.cs" />
     <Compile Include="Services\Trader\TransportService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>

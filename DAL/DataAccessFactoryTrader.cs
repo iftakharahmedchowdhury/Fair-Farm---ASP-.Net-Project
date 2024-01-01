@@ -72,5 +72,9 @@ namespace DAL
 
             return new TraderEquipmentRentRepo();
         }
+        public static ITraderShowRedList<User, int, string> TraderShowRedListData()
+        {
+            return new TraderShowRedListRepo();
+        }
     }
 }
