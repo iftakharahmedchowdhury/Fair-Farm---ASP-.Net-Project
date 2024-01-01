@@ -81,6 +81,8 @@
     <Compile Include="Interfaces\IUserIdFormUname.cs" />
     <Compile Include="Interfaces\Trader\IColdStorageRequest.cs" />
     <Compile Include="Interfaces\Trader\ICropsOrder.cs" />
+    <Compile Include="Interfaces\Trader\ITraderRent.cs" />
+    <Compile Include="Interfaces\Trader\IShowDetails.cs" />
     <Compile Include="Interfaces\Trader\ITransport.cs" />
     <Compile Include="Migrations\202312300801271_updatetable.cs" />
     <Compile Include="Migrations\202312300801271_updatetable.designer.cs">
@@ -89,14 +91,6 @@
     <Compile Include="Migrations\202312300840084_updateing.cs" />
     <Compile Include="Migrations\202312300840084_updateing.designer.cs">
       <DependentUpon>202312300840084_updateing.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312280414527_updatingModelFreeseedDistribution.cs" />
-    <Compile Include="Migrations\202312280414527_updatingModelFreeseedDistribution.designer.cs">
-      <DependentUpon>202312280414527_updatingModelFreeseedDistribution.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312280414527_updatingModelFreeseedDistribution.cs" />
-    <Compile Include="Migrations\202312280414527_updatingModelFreeseedDistribution.designer.cs">
-      <DependentUpon>202312280414527_updatingModelFreeseedDistribution.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,6 +107,7 @@
     <Compile Include="Repos\Admin\PreviousPriceRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
+    <Compile Include="Repos\Trader\TraderEquipmentRentRepo.cs" />
     <Compile Include="Repos\Trader\ColdStorageRepo.cs" />
     <Compile Include="Repos\Trader\CropsOrderRepo.cs" />
     <Compile Include="Repos\Trader\CropsRequestTableRepo.cs" />
@@ -133,12 +128,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312300840084_updateing.resx">
       <DependentUpon>202312300840084_updateing.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312280414527_updatingModelFreeseedDistribution.resx">
-      <DependentUpon>202312280414527_updatingModelFreeseedDistribution.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312280414527_updatingModelFreeseedDistribution.resx">
-      <DependentUpon>202312280414527_updatingModelFreeseedDistribution.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
-﻿using DAL;
+﻿using BLL.DTOs;
+using DAL;
 using DAL.EF.Models;
 using System;
 using System.Collections.Generic;

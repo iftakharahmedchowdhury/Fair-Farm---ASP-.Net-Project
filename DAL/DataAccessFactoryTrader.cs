@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL.Repos.Admin;
 
 namespace DAL
 {
@@ -59,6 +60,17 @@ namespace DAL
         {
 
             return new ColdStorageRepo();
+        }
+        /*public static IShowDetails<AdminStoredItem, int, AdminStoredItem> AdminStoredItemData()
+        {
+
+            return new AdminStoredItemRepo();
+        }*/
+
+        public static ITraderRent<EquipmentRent, int, EquipmentRent, string> TraderEquipmentRentData()
+        {
+
+            return new TraderEquipmentRentRepo();
         }
     }
 }

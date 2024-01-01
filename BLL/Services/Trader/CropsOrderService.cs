@@ -14,7 +14,7 @@ namespace BLL.Services.Trader
     public class CropsOrderService
     {
 
-        public static void AddRequestAndItems(RequestTableDTO requestDto)
+        public static void AddRequestAndItems(RequestTableItemDTO requestDto)
         {
             var config = new MapperConfiguration(cfg =>
             {
@@ -25,15 +25,17 @@ namespace BLL.Services.Trader
 
             var requestEntity = mapper.Map<RequestTable>(requestDto);
 
-            var addedRequest = DataAccessFactoryTrader.RequestTableItemData().Add(requestEntity);
+            var addedRequest = DataAccessFactoryTrader.RequestTableData().Add(requestEntity);
 
-            var requestItems = requestDto.RequestItems.Select(itemDto => mapper.Map<RequestTableItem>(itemDto)).ToList();
-            foreach (var requestItem in requestItems)
-            {
-                requestItem.RequestId = addedRequest.Id;
-                DataAccessFactory.RequestTableItemData().Add(requestItem);
+            //var requestItems = requestDto.RequestItems.Select(itemDto => mapper.Map<RequestTableItem>(itemDto)).ToList();
+            //foreach (var requestItem in requestItems)
+            //{
+              //  requestItem.RequestId = addedRequest.Id;
+              //  DataAccessFactoryTrader.RequestTableItemData().Add(requestItem);
 
             }
         }
+
+      
     }
-    }
+    

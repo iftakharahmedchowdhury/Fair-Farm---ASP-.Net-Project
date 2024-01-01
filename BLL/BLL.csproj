@@ -60,6 +60,7 @@
     <Compile Include="DTOs\RequestTableItemDTO.cs" />
     <Compile Include="DTOs\StoredItemInColdStorageDTO.cs" />
     <Compile Include="DTOs\TokenDTO.cs" />
+    <Compile Include="DTOs\TraderDTOs\TraderEquipmentRentDTO.cs" />
     <Compile Include="DTOs\TrainingTableDTO.cs" />
     <Compile Include="DTOs\TransportationFleetRegisterDTO.cs" />
     <Compile Include="DTOs\TransportationFleetRentDTO.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Services\AuthServices.cs" />
     <Compile Include="Services\Trader\ColdStorageService.cs" />
     <Compile Include="Services\Trader\CropsOrderService.cs" />
+    <Compile Include="Services\Trader\TraderEqupmentRentService.cs" />
     <Compile Include="Services\Trader\TransportService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
