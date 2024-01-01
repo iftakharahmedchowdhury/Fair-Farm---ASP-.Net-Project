@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.EF.Models
+namespace BLL.DTOs
 {
     public class ColdStorageItemListDTO
     {

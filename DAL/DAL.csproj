@@ -94,6 +94,10 @@
     <Compile Include="Migrations\202312280414527_updatingModelFreeseedDistribution.designer.cs">
       <DependentUpon>202312280414527_updatingModelFreeseedDistribution.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312280414527_updatingModelFreeseedDistribution.cs" />
+    <Compile Include="Migrations\202312280414527_updatingModelFreeseedDistribution.designer.cs">
+      <DependentUpon>202312280414527_updatingModelFreeseedDistribution.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\Admin\AdminStoredItemRepo.cs" />
@@ -129,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312300840084_updateing.resx">
       <DependentUpon>202312300840084_updateing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312280414527_updatingModelFreeseedDistribution.resx">
+      <DependentUpon>202312280414527_updatingModelFreeseedDistribution.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312280414527_updatingModelFreeseedDistribution.resx">
       <DependentUpon>202312280414527_updatingModelFreeseedDistribution.cs</DependentUpon>
