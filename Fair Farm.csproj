@@ -104,9 +104,15 @@
     <Compile Include="Controllers\Admin\ManageTraningController.cs" />
     <Compile Include="Controllers\Admin\PreviousPriceDataController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
-    <Compile Include="Controllers\Trader\ColdStorageRequestController.cs" />
-    <Compile Include="Controllers\Trader\CropsOrderController.cs" />
-    <Compile Include="Controllers\Trader\TransportController.cs" />
+    <Compile Include="Controllers\Farmer\FarmerEqupmentRentController.cs" />
+    <Compile Include="Controllers\Farmer\FarmerFreeSeedsDistributionController.cs" />
+    <Compile Include="Controllers\Farmer\FarmerPreviousPriceController.cs" />
+    <Compile Include="Controllers\Farmer\FarmerRedListController.cs" />
+    <Compile Include="Controllers\Farmer\FarmerRegularPriceController.cs" />
+    <Compile Include="Controllers\Farmer\FarmerTrainingController.cs" />
+    <Compile Include="Controllers\Farmer\FarmerTransportationFleetRentController.cs" />
+    <Compile Include="Controllers\Farmer\FarmerTransportationFleetSeeController.cs" />
+    <Compile Include="Controllers\Farmer\PlantingCalenderController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -125,7 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\Farmer\" />
+    <Folder Include="Controllers\Trader\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="BLL\BLL.csproj">

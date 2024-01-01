@@ -104,5 +104,22 @@ E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.csproj.Generate
 E:\.net\Fair Farm\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.Migrations.updateing.resources
 =======
 E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+<<<<<<< HEAD
+D:\Semester 11\.NET FINAL PROJECT\Fair-Farm---ASP-.Net-Project\DAL\bin\Debug\DAL.dll.config
+D:\Semester 11\.NET FINAL PROJECT\Fair-Farm---ASP-.Net-Project\DAL\bin\Debug\DAL.dll
+D:\Semester 11\.NET FINAL PROJECT\Fair-Farm---ASP-.Net-Project\DAL\bin\Debug\DAL.pdb
+D:\Semester 11\.NET FINAL PROJECT\Fair-Farm---ASP-.Net-Project\DAL\bin\Debug\EntityFramework.dll
+D:\Semester 11\.NET FINAL PROJECT\Fair-Farm---ASP-.Net-Project\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Semester 11\.NET FINAL PROJECT\Fair-Farm---ASP-.Net-Project\DAL\bin\Debug\EntityFramework.xml
+D:\Semester 11\.NET FINAL PROJECT\Fair-Farm---ASP-.Net-Project\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Semester 11\.NET FINAL PROJECT\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Semester 11\.NET FINAL PROJECT\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.Migrations.creatingAllTablesAndRelationship.resources
+D:\Semester 11\.NET FINAL PROJECT\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\Semester 11\.NET FINAL PROJECT\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Semester 11\.NET FINAL PROJECT\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Semester 11\.NET FINAL PROJECT\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.dll
+D:\Semester 11\.NET FINAL PROJECT\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.pdb
+D:\Semester 11\.NET FINAL PROJECT\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.Migrations.updatingModelFreeseedDistribution.resources
+=======
 E:\AIUB STUDY\11th semeser\adv. dot net\Final\Final Project\Fair-Farm---ASP-.Net-Project\DAL\obj\Debug\DAL.Migrations.updatingModelFreeseedDistribution.resources
 >>>>>>> main
