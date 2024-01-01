@@ -125,27 +125,6 @@ namespace DAL
 
             return new UserRepo();
         }
-        public static ITransport<TransportationFleetRegister,int,TransportationFleetRegister>TransportContent()
-        {
-            return new TransportRepo();
-        }
 
-        public static ICropsOrder<RequestTableItem, int, RequestTableItem> RequestTableItemData()
-        {
-
-            return new CropsOrderRepo();
-        }
-        public static ICropsOrder<RequestTable, int, RequestTable> RequestTableData()
-        {
-
-            return new CropsRequestTableRepo();
-        }
-
-
-        public static IColdStorageRequest<ColdStorageItemList, int, ColdStorageItemList> ColdStorageItemListData()
-        {
-
-           return new ColdStorageRepo();
-        }
     }
 }
