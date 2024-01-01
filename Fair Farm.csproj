@@ -104,6 +104,9 @@
     <Compile Include="Controllers\Admin\ManageTraningController.cs" />
     <Compile Include="Controllers\Admin\PreviousPriceDataController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\Trader\ColdStorageRequestController.cs" />
+    <Compile Include="Controllers\Trader\CropsOrderController.cs" />
+    <Compile Include="Controllers\Trader\TransportController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -123,7 +126,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\Farmer\" />
-    <Folder Include="Controllers\Trader\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="BLL\BLL.csproj">

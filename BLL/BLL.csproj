@@ -73,6 +73,9 @@
     <Compile Include="Services\Admin\ManageTraningService.cs" />
     <Compile Include="Services\Admin\PreviousPriceDataService.cs" />
     <Compile Include="Services\AuthServices.cs" />
+    <Compile Include="Services\Trader\ColdStorageService.cs" />
+    <Compile Include="Services\Trader\CropsOrderService.cs" />
+    <Compile Include="Services\Trader\TransportService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -83,7 +86,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\Farmer\" />
-    <Folder Include="Services\Trader\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
