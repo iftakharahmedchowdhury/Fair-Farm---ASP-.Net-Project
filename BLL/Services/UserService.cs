@@ -101,8 +101,18 @@ namespace BLL.Services
 
         public static bool Delete(int id)
         {
-            return DataAccessFactory.UserData().Delete(id);
+            var UserData = DataAccessFactory.UserData().Get(id);
+
+            if (UserData != null)
+            {
+                var isDeleted = DataAccessFactory.UserData().Delete(id);
+
+                return isDeleted;
+            }
+
+            return false;
         }
+
 
 
     }

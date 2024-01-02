@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.EF.Models
+namespace BLL.DTOs
 {
-    public class FreeSeedsDistribution
+    public class FreeSeedsDistributionDTO
     {
 
         public int Id { get; set; }
@@ -19,7 +19,7 @@ namespace DAL.EF.Models
 
         public DateTime Date { get; set; }
    
-        public decimal Location { get; set; }
+        public string Location { get; set; }
 
     
         public string Region { get; set; }
