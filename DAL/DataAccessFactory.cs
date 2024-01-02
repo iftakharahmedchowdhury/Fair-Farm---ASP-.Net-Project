@@ -119,12 +119,10 @@ namespace DAL
             return new TokenRepo();
         }
 
-
         public static IUserIdFormUname GetUserIdData()
         {
 
             return new UserRepo();
         }
-
     }
 }

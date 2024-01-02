@@ -53,7 +53,6 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DataAccessFactory.cs" />
-    <Compile Include="DataAccessFactoryTrader.cs" />
     <Compile Include="EF\FairFarmContext.cs" />
     <Compile Include="EF\Models\AdminStoredItem.cs" />
     <Compile Include="EF\Models\BuySellRequestBetweenFarmerAndTrader.cs" />
@@ -79,20 +78,9 @@
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IUserIdFormUname.cs" />
-    <Compile Include="Interfaces\Trader\IColdStorageRequest.cs" />
-    <Compile Include="Interfaces\Trader\ICropsOrder.cs" />
-    <Compile Include="Interfaces\Trader\ITransport.cs" />
-    <Compile Include="Migrations\202312300801271_updatetable.cs" />
-    <Compile Include="Migrations\202312300801271_updatetable.designer.cs">
-      <DependentUpon>202312300801271_updatetable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312300840084_updateing.cs" />
-    <Compile Include="Migrations\202312300840084_updateing.designer.cs">
-      <DependentUpon>202312300840084_updateing.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312280414527_updatingModelFreeseedDistribution.cs" />
-    <Compile Include="Migrations\202312280414527_updatingModelFreeseedDistribution.designer.cs">
-      <DependentUpon>202312280414527_updatingModelFreeseedDistribution.cs</DependentUpon>
+    <Compile Include="Migrations\202312230624111_creatingAllTablesAndRelationship.cs" />
+    <Compile Include="Migrations\202312230624111_creatingAllTablesAndRelationship.designer.cs">
+      <DependentUpon>202312230624111_creatingAllTablesAndRelationship.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202312280414527_updatingModelFreeseedDistribution.cs" />
     <Compile Include="Migrations\202312280414527_updatingModelFreeseedDistribution.designer.cs">
@@ -113,10 +101,6 @@
     <Compile Include="Repos\Admin\PreviousPriceRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
-    <Compile Include="Repos\Trader\ColdStorageRepo.cs" />
-    <Compile Include="Repos\Trader\CropsOrderRepo.cs" />
-    <Compile Include="Repos\Trader\CropsRequestTableRepo.cs" />
-    <Compile Include="Repos\Trader\TransportRepo.cs" />
     <Compile Include="Repos\UserRepo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -125,17 +109,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\Farmer\" />
+    <Folder Include="Interfaces\Trader\" />
     <Folder Include="Repos\Farmer\" />
+    <Folder Include="Repos\Trader\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202312300801271_updatetable.resx">
-      <DependentUpon>202312300801271_updatetable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312300840084_updateing.resx">
-      <DependentUpon>202312300840084_updateing.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312280414527_updatingModelFreeseedDistribution.resx">
-      <DependentUpon>202312280414527_updatingModelFreeseedDistribution.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312230624111_creatingAllTablesAndRelationship.resx">
+      <DependentUpon>202312230624111_creatingAllTablesAndRelationship.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312280414527_updatingModelFreeseedDistribution.resx">
       <DependentUpon>202312280414527_updatingModelFreeseedDistribution.cs</DependentUpon>
