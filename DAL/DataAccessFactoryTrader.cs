@@ -44,28 +44,7 @@ namespace DAL
             return new TransportRepo();
         }
 
-        public static ICropsOrder<RequestTableItem, int, RequestTableItem> RequestTableItemData()
-        {
-
-            return new CropsOrderRepo();
-        }
-        public static ICropsOrder<RequestTable, int, RequestTable> RequestTableData()
-        {
-
-            return new CropsRequestTableRepo();
-        }
-
-
-        public static IColdStorageRequest<ColdStorageItemList, int, ColdStorageItemList> ColdStorageItemListData()
-        {
-
-            return new ColdStorageRepo();
-        }
-        /*public static IShowDetails<AdminStoredItem, int, AdminStoredItem> AdminStoredItemData()
-        {
-
-            return new AdminStoredItemRepo();
-        }*/
+          
 
         public static ITraderRent<EquipmentRent, int, EquipmentRent, string> TraderEquipmentRentData()
         {
@@ -75,6 +54,15 @@ namespace DAL
         public static ITraderShowRedList<User, int, string> TraderShowRedListData()
         {
             return new TraderShowRedListRepo();
+        }
+        public static IRequestBuySellColdStorage<RequestTable, int, string> TradersellandColdStorageRequestData()
+        {
+            return new TraderRequestSellandColdStorageRepo();
+        }
+        public static ITraderColdStorageandSellRequestItem<RequestTableItem, int, RequestTableItem> TraderAddSellItemtotheRequestItemData()
+        {
+
+            return new TraderSellItemRepo();
         }
     }
 }

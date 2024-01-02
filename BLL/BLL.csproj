@@ -74,9 +74,9 @@
     <Compile Include="Services\Admin\ManageTraningService.cs" />
     <Compile Include="Services\Admin\PreviousPriceDataService.cs" />
     <Compile Include="Services\AuthServices.cs" />
-    <Compile Include="Services\Trader\ColdStorageService.cs" />
-    <Compile Include="Services\Trader\CropsOrderService.cs" />
     <Compile Include="Services\Trader\TraderEqupmentRentService.cs" />
+    <Compile Include="Services\Trader\TraderSellandColdStorageRequestService.cs" />
+    <Compile Include="Services\Trader\TraderSellItemService.cs" />
     <Compile Include="Services\Trader\TraderShowRedListService.cs" />
     <Compile Include="Services\Trader\TransportService.cs" />
     <Compile Include="Services\UserService.cs" />

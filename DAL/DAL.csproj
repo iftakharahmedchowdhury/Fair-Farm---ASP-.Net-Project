@@ -79,8 +79,9 @@
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IUserIdFormUname.cs" />
-    <Compile Include="Interfaces\Trader\IColdStorageRequest.cs" />
     <Compile Include="Interfaces\Trader\ICropsOrder.cs" />
+    <Compile Include="Interfaces\Trader\ITraderColdStorageandSellRequestItem.cs" />
+    <Compile Include="Interfaces\Trader\IRequestBuySellColdStorage.cs" />
     <Compile Include="Interfaces\Trader\ITraderShowRedList.cs" />
     <Compile Include="Interfaces\Trader\ITraderRent.cs" />
     <Compile Include="Interfaces\Trader\IShowDetails.cs" />
@@ -108,10 +109,10 @@
     <Compile Include="Repos\Admin\PreviousPriceRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
+    <Compile Include="Repos\Trader\TraderSellItemRepo.cs" />
     <Compile Include="Repos\Trader\TraderEquipmentRentRepo.cs" />
-    <Compile Include="Repos\Trader\ColdStorageRepo.cs" />
-    <Compile Include="Repos\Trader\CropsOrderRepo.cs" />
     <Compile Include="Repos\Trader\CropsRequestTableRepo.cs" />
+    <Compile Include="Repos\Trader\TraderRequestSellandColdStorageRepo.cs" />
     <Compile Include="Repos\Trader\TraderShowRedListRepo.cs" />
     <Compile Include="Repos\Trader\TransportRepo.cs" />
     <Compile Include="Repos\UserRepo.cs" />
