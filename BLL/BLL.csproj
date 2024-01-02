@@ -76,27 +76,31 @@
     <Compile Include="Services\Admin\PreviousPriceDataService.cs" />
     <Compile Include="Services\AuthServices.cs" />
     <Compile Include="Services\Farmer\FarmerAccessRedListService.cs" />
+    <Compile Include="Services\Farmer\FarmerBuySellRequestBetweenFarmerandTraderService.cs" />
+    <Compile Include="Services\Farmer\FarmerColdStorageItemService.cs" />
     <Compile Include="Services\Farmer\FarmerEqupmentRentService.cs" />
     <Compile Include="Services\Farmer\FarmerFreeSeedDistributionService.cs" />
     <Compile Include="Services\Farmer\FarmerPlantingCalenderService.cs" />
     <Compile Include="Services\Farmer\FarmerPreviousPriceService.cs" />
     <Compile Include="Services\Farmer\FarmerRegularPriceService.cs" />
+    <Compile Include="Services\Farmer\FarmerSellandColdStorageRequestService.cs" />
+    <Compile Include="Services\Farmer\FarmerSellItemService.cs" />
     <Compile Include="Services\Farmer\FarmerTrainingServices.cs" />
     <Compile Include="Services\Farmer\FarmerTransportationFleetRentService.cs" />
     <Compile Include="Services\Farmer\FarmerTransportationFleetSeeService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{cabee5e2-c08a-4d9b-9f4c-ae8d1e007f6e}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Services\Trader\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{cabee5e2-c08a-4d9b-9f4c-ae8d1e007f6e}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

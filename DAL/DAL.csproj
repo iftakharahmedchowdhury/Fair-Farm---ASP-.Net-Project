@@ -76,8 +76,11 @@
     <Compile Include="Interfaces\Admin\ICropBuySellRequest.cs" />
     <Compile Include="Interfaces\Admin\IPreviousPrice.cs" />
     <Compile Include="Interfaces\Admin\IRegularPriceDataByName.cs" />
+    <Compile Include="Interfaces\Farmer\IBuySellbetweenFarmerandTrader_User_Farmer.cs" />
+    <Compile Include="Interfaces\Farmer\IBuySellColdStorage.cs" />
     <Compile Include="Interfaces\Farmer\ICheckPlantingCalenderExisting.cs" />
     <Compile Include="Interfaces\Farmer\IFarmerAccessRedList.cs" />
+    <Compile Include="Interfaces\Farmer\IFarmerColdStorageandSellRequestItem.cs" />
     <Compile Include="Interfaces\Farmer\IFarmerRent.cs" />
     <Compile Include="Interfaces\Farmer\IPlantingCalender.cs" />
     <Compile Include="Interfaces\Farmer\IRegularPriceandPreviousPrice.cs" />
@@ -89,10 +92,6 @@
     <Compile Include="Migrations\202312230624111_creatingAllTablesAndRelationship.cs" />
     <Compile Include="Migrations\202312230624111_creatingAllTablesAndRelationship.designer.cs">
       <DependentUpon>202312230624111_creatingAllTablesAndRelationship.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312280414527_updatingModelFreeseedDistribution.cs" />
-    <Compile Include="Migrations\202312280414527_updatingModelFreeseedDistribution.designer.cs">
-      <DependentUpon>202312280414527_updatingModelFreeseedDistribution.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202312280623598_updatingModelFreeseedDistribution.cs" />
     <Compile Include="Migrations\202312280623598_updatingModelFreeseedDistribution.designer.cs">
@@ -112,12 +111,16 @@
     <Compile Include="Repos\Admin\ManageTraningRepo.cs" />
     <Compile Include="Repos\Admin\PreviousPriceRepo.cs" />
     <Compile Include="Repos\Farmer\FarmerAccesstoRedListRepo.cs" />
+    <Compile Include="Repos\Farmer\FarmerBuySellBetweenFarmerandTraderRepo.cs" />
+    <Compile Include="Repos\Farmer\FarmerColdStorageItemRepo.cs" />
     <Compile Include="Repos\Farmer\FarmerEqupmentRentRepo.cs" />
     <Compile Include="Repos\Farmer\FarmerFreeSeedDistributionRepo.cs" />
     <Compile Include="Repos\Farmer\FarmerPlantingCalenderRepo.cs" />
     <Compile Include="Repos\Farmer\FarmerPreviousPriceRepo.cs" />
     <Compile Include="Repos\Farmer\FarmerRegisteredTransportationFleetRepo.cs" />
     <Compile Include="Repos\Farmer\FarmerRegularPriceandRepo.cs" />
+    <Compile Include="Repos\Farmer\FarmerRequestSellandColdStorageRepo.cs" />
+    <Compile Include="Repos\Farmer\FarmerSellItemRepo.cs" />
     <Compile Include="Repos\Farmer\FarmerTrainingDetailsRepo.cs" />
     <Compile Include="Repos\Farmer\FarmerTransportationRentRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
@@ -135,9 +138,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202312230624111_creatingAllTablesAndRelationship.resx">
       <DependentUpon>202312230624111_creatingAllTablesAndRelationship.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312280414527_updatingModelFreeseedDistribution.resx">
-      <DependentUpon>202312280414527_updatingModelFreeseedDistribution.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312280623598_updatingModelFreeseedDistribution.resx">
       <DependentUpon>202312280623598_updatingModelFreeseedDistribution.cs</DependentUpon>

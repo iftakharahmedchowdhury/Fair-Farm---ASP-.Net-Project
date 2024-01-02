@@ -64,5 +64,27 @@ namespace DAL
 
             return new FarmerFreeSeedDistributionRepo();
         }
+        public static IBuySellColdStorage<RequestTable, int, string> FarmersellandColdStorageRequestData()
+        {
+            return new FarmerRequestSellandColdStorageRepo();
+        }
+
+
+        public static IFarmerColdStorageandSellRequestItem<RequestTableItem, int, RequestTableItem> FarAddSellItemtotheRequestItemData()
+        {
+
+            return new FarmerSellItemRepo();
+        }
+        public static IFarmerColdStorageandSellRequestItem<ColdStorageItemList, int, ColdStorageItemList> FarAddColdStorageItemtotheRequestItemData()
+        {
+
+            return new FarmerColdStorageItemRepo();
+        }
+
+
+        public static IBuySellbetweenFarmerandTrader_User_Farmer<BuySellRequestBetweenFarmerAndTrader, string, int, BuySellRequestBetweenFarmerAndTrader> FarmerBuySellRequestBetweenFarmerandTrader()
+        {
+            return new FarmerBuySellBetweenFarmerandTraderRepo();
+        }
     }
 }

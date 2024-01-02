@@ -104,11 +104,15 @@
     <Compile Include="Controllers\Admin\ManageTraningController.cs" />
     <Compile Include="Controllers\Admin\PreviousPriceDataController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\Farmer\BuySellBetweenFarmerandTraderController.cs" />
+    <Compile Include="Controllers\Farmer\FarmerColdStorageItemController.cs" />
     <Compile Include="Controllers\Farmer\FarmerEqupmentRentController.cs" />
     <Compile Include="Controllers\Farmer\FarmerFreeSeedsDistributionController.cs" />
     <Compile Include="Controllers\Farmer\FarmerPreviousPriceController.cs" />
     <Compile Include="Controllers\Farmer\FarmerRedListController.cs" />
     <Compile Include="Controllers\Farmer\FarmerRegularPriceController.cs" />
+    <Compile Include="Controllers\Farmer\FarmerSellAndColdStorageRequestController.cs" />
+    <Compile Include="Controllers\Farmer\FarmerSellItemController.cs" />
     <Compile Include="Controllers\Farmer\FarmerTrainingController.cs" />
     <Compile Include="Controllers\Farmer\FarmerTransportationFleetRentController.cs" />
     <Compile Include="Controllers\Farmer\FarmerTransportationFleetSeeController.cs" />
