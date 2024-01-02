@@ -35,11 +35,11 @@ namespace BLL.Services.Farmer
 
             var userId = data.FarmerUserId;
             var seasonalYear = data.SeasonalYear;
-            var cropsName = data.CropsName.ToLower(); 
-            var season = data.SeasonName.ToLower(); 
-            var region= data.Region;
+            var cropsName = data.CropsName.ToLower();
+            var season = data.SeasonName.ToLower();
+            var region = data.Region;
             var exists = FarmerDataAccessFactory.ExistingPlantingCalenderData().Get(userId, season, seasonalYear, cropsName);
-            var checkuser = DataAccessFactory.UserData().Get(userId); 
+            var checkuser = DataAccessFactory.UserData().Get(userId);
             var checkregion = DataAccessFactory.UserData().Get(userId);
             if (exists != null)
             {
@@ -53,7 +53,7 @@ namespace BLL.Services.Farmer
             {
                 throw new Exception("Your Profile Does not Match With the Farmer.");
             }
-            else if(checkregion.UserRegion!= region)
+            else if (checkregion.UserRegion != region)
             {
                 throw new Exception("Your Profile Region Does not Match With the Planting Calender Region.");
 
@@ -94,7 +94,7 @@ namespace BLL.Services.Farmer
         }
 
 
-        public static PlantingCalendarDTO Update(PlantingCalendarDTO dt,int calenderid)
+        public static PlantingCalendarDTO Update(PlantingCalendarDTO dt, int calenderid)
         {
             var config = new MapperConfiguration(cfg =>
             {
@@ -104,15 +104,15 @@ namespace BLL.Services.Farmer
             var data = mapper.Map<PlantingCalendar>(dt);
 
             var id = data.FarmerUserId;
-            var region= data.Region;
-            var checkcalenderowner= FarmerDataAccessFactory.PlantingCalenderData().Get(calenderid);//we will take the crops and compare the crops owner with the Farmer Id
+            var region = data.Region;
+            var checkcalenderowner = FarmerDataAccessFactory.PlantingCalenderData().Get(calenderid);//we will take the crops and compare the crops owner with the Farmer Id
             var checkregion = DataAccessFactory.UserData().Get(id);
 
             if (checkcalenderowner == null)
             {
                 throw new Exception("This Crop Does Not Exists in the System.");
             }
-            else if(checkcalenderowner.FarmerUserId != id)
+            else if (checkcalenderowner.FarmerUserId != id)
             {
                 throw new Exception("This Calender Product Does not Belongs to You.");
             }
@@ -134,15 +134,15 @@ namespace BLL.Services.Farmer
             return dataDTO;
         }
 
-        public static bool Delete(int id1,int id2)
+        public static bool Delete(int id1, int id2)
         {
             var checkcalenderowner = FarmerDataAccessFactory.PlantingCalenderData().Get(id1);
-            if(checkcalenderowner == null)
+            if (checkcalenderowner == null)
             {
                 throw new Exception("This Crops Does Not Exists in the System.");
 
             }
-            else if(checkcalenderowner.FarmerUserId != id2)
+            else if (checkcalenderowner.FarmerUserId != id2)
             {
                 throw new Exception("Your Profile Does not Match With This Planting Calender Crops Owner.");
             }
@@ -153,11 +153,11 @@ namespace BLL.Services.Farmer
         public static UserPlantingCalenderDTO GetwithCalenderCrops(int id)
         {
             var data = DataAccessFactory.UserData().Get(id);
-            if (data==null)
+            if (data == null)
             {
                 throw new Exception("Invalid Access to the Planting Calender Data.");
             }
-            else if(data.PlantingCalendars==null || data.PlantingCalendars.Count()==0)
+            else if (data.PlantingCalendars == null || data.PlantingCalendars.Count() == 0)
             {
                 throw new Exception("You Do not Have Any Data in the Planting Calender.");
             }

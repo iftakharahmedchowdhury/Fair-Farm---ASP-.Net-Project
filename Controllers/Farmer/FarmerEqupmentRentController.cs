@@ -80,7 +80,7 @@ namespace Fair_Farm.Controllers.Farmer
             {
                 var data = FarmerEqupmentRentService.GetByRegion(regions);
 
-                if (data.Count==0)
+                if (data.Count == 0)
                 {
                     return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "There is no Record of this Region" });
                 }
@@ -107,7 +107,7 @@ namespace Fair_Farm.Controllers.Farmer
         {
             try
             {
-                var data = FarmerEqupmentRentService.GetOwnRequestStatus(id,renterid);
+                var data = FarmerEqupmentRentService.GetOwnRequestStatus(id, renterid);
 
                 if (data != null)
                 {
@@ -254,7 +254,7 @@ namespace Fair_Farm.Controllers.Farmer
                 {
                     return Request.CreateResponse(HttpStatusCode.BadRequest, new { Message = ex.Message });
                 }
-                else if(ex.Message == "You are Providing Invalid Rent Status.")
+                else if (ex.Message == "You are Providing Invalid Rent Status.")
                 {
                     return Request.CreateResponse(HttpStatusCode.BadRequest, new { Message = ex.Message });
                 }

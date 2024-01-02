@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Interfaces.Farmer
 {
-    public interface IFarmerRent<CLASS, ID, RET,Par1>
+    public interface IFarmerRent<CLASS, ID, RET, Par1>
     {
         List<CLASS> GetRentRequests(ID id);
         CLASS Get(ID id);
@@ -14,7 +14,7 @@ namespace DAL.Interfaces.Farmer
         CLASS GetmyOwnRequest(ID id);
         RET Add(CLASS obj);
         RET Update(CLASS obj);
-        RET UpdateforRentReq(ID id1,ID id2);
+        RET UpdateforRentReq(ID id1, ID id2);
         bool Delete(ID obj);
 
 

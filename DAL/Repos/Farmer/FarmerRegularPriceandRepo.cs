@@ -14,7 +14,7 @@ namespace DAL.Repos.Farmer
         public List<RegularPriceUpdate> GetAll()
         {
             return db.RegularPriceUpdates.ToList();
-        }           
+        }
 
 
         public RegularPriceUpdate GetbyId(int id)

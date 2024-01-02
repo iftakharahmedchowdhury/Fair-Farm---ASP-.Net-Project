@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos.Farmer
 {
-    internal class FarmerPlantingCalenderRepo : Repo, IRepo<PlantingCalendar, int, PlantingCalendar>, ICheckPlantingCalenderExisting<PlantingCalendar,int,string>
+    internal class FarmerPlantingCalenderRepo : Repo, IRepo<PlantingCalendar, int, PlantingCalendar>, ICheckPlantingCalenderExisting<PlantingCalendar, int, string>
     {
         public PlantingCalendar Add(PlantingCalendar obj)
         {
@@ -43,15 +43,15 @@ namespace DAL.Repos.Farmer
 
         public PlantingCalendar Get(int id, string itm1, string itm2, string itm3)
         {
-            
-           return db.PlantingCalendars.FirstOrDefault(i => i.FarmerUserId == id && i.SeasonName == itm1 && i.SeasonalYear == itm2 && i.CropsName == itm3);
 
-            
+            return db.PlantingCalendars.FirstOrDefault(i => i.FarmerUserId == id && i.SeasonName == itm1 && i.SeasonalYear == itm2 && i.CropsName == itm3);
+
+
         }
 
         public PlantingCalendar Update(PlantingCalendar obj)
         {
-            var existingEntity = db.Set<PlantingCalendar>().Find(obj.Id); 
+            var existingEntity = db.Set<PlantingCalendar>().Find(obj.Id);
 
             if (existingEntity != null)
             {
@@ -71,7 +71,7 @@ namespace DAL.Repos.Farmer
                 return existingEntity;
             }
 
-            return null; 
+            return null;
         }
 
 

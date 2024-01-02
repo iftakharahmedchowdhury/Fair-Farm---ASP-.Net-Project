@@ -19,7 +19,7 @@ namespace Fair_Farm.Controllers.Farmer
             {
                 var data = FarmerRegularPriceService.GetallRegularPriceData();
 
-                if(data.Count==0)
+                if (data.Count == 0)
                 {
                     return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "There ia Not any Item" });
                 }

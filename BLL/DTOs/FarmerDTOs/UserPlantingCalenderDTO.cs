@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOs.FarmerDTOs
 {
-    public class UserPlantingCalenderDTO:UserDTO
+    public class UserPlantingCalenderDTO : UserDTO
     {
         public List<PlantingCalendarDTO> PlantingCalendars { get; set; }
 

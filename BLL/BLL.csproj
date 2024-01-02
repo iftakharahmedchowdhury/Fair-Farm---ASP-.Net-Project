@@ -51,6 +51,8 @@
     <Compile Include="DTOs\ColdStorageItemListDTO.cs" />
     <Compile Include="DTOs\ColdStorageUpdateModel.cs" />
     <Compile Include="DTOs\EquipmentRentDTO.cs" />
+    <Compile Include="DTOs\FarmerDTOs\FarmerEquipmentRentDTO.cs" />
+    <Compile Include="DTOs\FarmerDTOs\UserPlantingCalenderDTO.cs" />
     <Compile Include="DTOs\FreeSeedsDistributionDTO.cs" />
     <Compile Include="DTOs\ManageColdStorageDTO.cs" />
     <Compile Include="DTOs\PlantingCalendarDTO.cs" />
@@ -60,6 +62,7 @@
     <Compile Include="DTOs\RequestTableItemDTO.cs" />
     <Compile Include="DTOs\StoredItemInColdStorageDTO.cs" />
     <Compile Include="DTOs\TokenDTO.cs" />
+    <Compile Include="DTOs\TraderDTOs\TraderEquipmentRentDTO.cs" />
     <Compile Include="DTOs\TrainingTableDTO.cs" />
     <Compile Include="DTOs\TransportationFleetRegisterDTO.cs" />
     <Compile Include="DTOs\TransportationFleetRentDTO.cs" />
@@ -73,6 +76,24 @@
     <Compile Include="Services\Admin\ManageTraningService.cs" />
     <Compile Include="Services\Admin\PreviousPriceDataService.cs" />
     <Compile Include="Services\AuthServices.cs" />
+    <Compile Include="Services\Farmer\FarmerAccessRedListService.cs" />
+    <Compile Include="Services\Farmer\FarmerBuySellRequestBetweenFarmerandTraderService.cs" />
+    <Compile Include="Services\Farmer\FarmerColdStorageItemService.cs" />
+    <Compile Include="Services\Farmer\FarmerEqupmentRentService.cs" />
+    <Compile Include="Services\Farmer\FarmerFreeSeedDistributionService.cs" />
+    <Compile Include="Services\Farmer\FarmerPlantingCalenderService.cs" />
+    <Compile Include="Services\Farmer\FarmerPreviousPriceService.cs" />
+    <Compile Include="Services\Farmer\FarmerRegularPriceService.cs" />
+    <Compile Include="Services\Farmer\FarmerSellandColdStorageRequestService.cs" />
+    <Compile Include="Services\Farmer\FarmerSellItemService.cs" />
+    <Compile Include="Services\Farmer\FarmerTrainingServices.cs" />
+    <Compile Include="Services\Farmer\FarmerTransportationFleetRentService.cs" />
+    <Compile Include="Services\Farmer\FarmerTransportationFleetSeeService.cs" />
+    <Compile Include="Services\Trader\TraderEqupmentRentService.cs" />
+    <Compile Include="Services\Trader\TraderSellandColdStorageRequestService.cs" />
+    <Compile Include="Services\Trader\TraderSellItemService.cs" />
+    <Compile Include="Services\Trader\TraderShowRedListService.cs" />
+    <Compile Include="Services\Trader\TransportService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,10 +102,7 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\Farmer\" />
-    <Folder Include="Services\Trader\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL.Repos.Admin;
 
 namespace DAL
 {
@@ -43,22 +44,25 @@ namespace DAL
             return new TransportRepo();
         }
 
-        public static ICropsOrder<RequestTableItem, int, RequestTableItem> RequestTableItemData()
+
+
+        public static ITraderRent<EquipmentRent, int, EquipmentRent, string> TraderEquipmentRentData()
         {
 
-            return new CropsOrderRepo();
+            return new TraderEquipmentRentRepo();
         }
-        public static ICropsOrder<RequestTable, int, RequestTable> RequestTableData()
+        public static ITraderShowRedList<User, int, string> TraderShowRedListData()
         {
-
-            return new CropsRequestTableRepo();
+            return new TraderShowRedListRepo();
         }
-
-
-        public static IColdStorageRequest<ColdStorageItemList, int, ColdStorageItemList> ColdStorageItemListData()
+        public static IRequestBuySellColdStorage<RequestTable, int, string> TradersellandColdStorageRequestData()
+        {
+            return new TraderRequestSellandColdStorageRepo();
+        }
+        public static ITraderColdStorageandSellRequestItem<RequestTableItem, int, RequestTableItem> TraderAddSellItemtotheRequestItemData()
         {
 
-            return new ColdStorageRepo();
+            return new TraderSellItemRepo();
         }
     }
 }

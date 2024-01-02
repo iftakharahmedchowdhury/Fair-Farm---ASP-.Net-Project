@@ -20,7 +20,7 @@ namespace DAL.Repos.Farmer
         public List<User> GetByRegion(string region, string type)
         {
             return db.Users.Where(e => e.UserRegion == region && e.UserType == type && e.UserRedList == true).ToList();
-            
+
         }
     }
 }

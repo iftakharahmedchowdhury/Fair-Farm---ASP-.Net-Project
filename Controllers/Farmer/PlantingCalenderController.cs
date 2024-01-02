@@ -97,11 +97,11 @@ namespace Fair_Farm.Controllers.Farmer
         /*[FarmerAccess]*/
         [HttpPut]
         [Route("api/PlantingCalender/{id}")]
-        public HttpResponseMessage UpdatePlantingCalenderData(PlantingCalendarDTO updata,int id)
+        public HttpResponseMessage UpdatePlantingCalenderData(PlantingCalendarDTO updata, int id)
         {
             try
             {
-                var data = FarmerPlantingCalenderService.Update(updata,id);
+                var data = FarmerPlantingCalenderService.Update(updata, id);
                 if (data != null)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Calender updated " });
@@ -120,11 +120,11 @@ namespace Fair_Farm.Controllers.Farmer
         /*[FarmerAccess]*/
         [HttpDelete]
         [Route("api/PlantingCalender/{id1}/{id2}")]
-        public HttpResponseMessage DeletePlantingCalender(int id1,int id2)
+        public HttpResponseMessage DeletePlantingCalender(int id1, int id2)
         {
             try
             {
-                var isDeleted = FarmerPlantingCalenderService.Delete(id1,id2);
+                var isDeleted = FarmerPlantingCalenderService.Delete(id1, id2);
                 if (isDeleted)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Your Planting Calender deleted successfully" });

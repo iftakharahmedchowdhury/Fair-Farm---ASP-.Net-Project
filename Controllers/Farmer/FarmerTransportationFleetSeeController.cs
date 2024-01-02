@@ -48,12 +48,12 @@ namespace Fair_Farm.Controllers.Farmer
                 {
                     return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "No Record found" });
                 }
-                else if(data != null)
+                else if (data != null)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, data);
 
                 }
-                else 
+                else
                 {
                     return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Invalid Request" });
                 }

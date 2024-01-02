@@ -6,11 +6,21 @@
       "DisplayName": "Fair Farm",
       "ColorIndex": 0
     },
+    "b833202c-c97e-4568-b948-93999f58d753": {
+      "ProjectGuid": "b833202c-c97e-4568-b948-93999f58d753",
+      "DisplayName": "BLL",
+      "ColorIndex": 1
+    },
+    "cabee5e2-c08a-4d9b-9f4c-ae8d1e007f6e": {
+      "ProjectGuid": "cabee5e2-c08a-4d9b-9f4c-ae8d1e007f6e",
+      "DisplayName": "DAL",
+      "ColorIndex": 2
+    },
     "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }

@@ -33,7 +33,7 @@ namespace DAL.Repos.Farmer
 
         public List<EquipmentRent> GetRentRequests(int ownerid)
         {
-            return db.EquipmentRents.Where(e => e.OwnerUserId == ownerid && e.RentStatus=="Not Rented" && e.RenterUserId!=e.OwnerUserId).ToList();
+            return db.EquipmentRents.Where(e => e.OwnerUserId == ownerid && e.RentStatus == "Not Rented" && e.RenterUserId != e.OwnerUserId).ToList();
         }
 
         public EquipmentRent Get(int id)
@@ -57,17 +57,17 @@ namespace DAL.Repos.Farmer
             var existingRequest = Get(obj.Id);
             if (existingRequest != null)
             {
-                if(obj.EquipmentName==null)
+                if (obj.EquipmentName == null)
                 {
                     obj.EquipmentName = existingRequest.EquipmentName;
                 }
-                else if(obj.PerdayRent==0)
+                else if (obj.PerdayRent == 0)
                 {
-                    obj.PerdayRent= existingRequest.PerdayRent;
+                    obj.PerdayRent = existingRequest.PerdayRent;
                 }
-                else if(obj.Location==null)
+                else if (obj.Location == null)
                 {
-                    obj.Location= existingRequest.Location;
+                    obj.Location = existingRequest.Location;
                 }
                 db.Entry(existingRequest).CurrentValues.SetValues(obj);
                 db.SaveChanges();

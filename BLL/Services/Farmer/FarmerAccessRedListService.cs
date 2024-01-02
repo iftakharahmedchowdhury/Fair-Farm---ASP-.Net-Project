@@ -12,7 +12,7 @@ namespace BLL.Services.Farmer
 {
     public class FarmerAccessRedListService
     {
-        public static List<UserDTO> GetRedListedUserbyFarmerandbyRegion(string region,string type)
+        public static List<UserDTO> GetRedListedUserbyFarmerandbyRegion(string region, string type)
         {
             var data = FarmerDataAccessFactory.FarmerAccesstoRedListUserData().GetByRegion(region, type);
 

@@ -1,4 +1,5 @@
-﻿using DAL;
+﻿using BLL.DTOs;
+using DAL;
 using DAL.EF.Models;
 using System;
 using System.Collections.Generic;
@@ -18,13 +19,13 @@ namespace BLL.Services.Trader
 
         public static int Add(TransportationFleetRegisterDTO data)
         {
-            var value=Convert(data);
-            return DataAccessFactoryTrader.TransportContent().Add(value); 
+            var value = Convert(data);
+            return DataAccessFactoryTrader.TransportContent().Add(value);
         }
         private static List<TransportationFleetRegisterDTO> Convert(List<TransportationFleetRegister> data)
         {
-            var value=new List<TransportationFleetRegisterDTO>();
-            foreach(TransportationFleetRegister transport in data)
+            var value = new List<TransportationFleetRegisterDTO>();
+            foreach (TransportationFleetRegister transport in data)
             {
                 value.Add(Convert(transport));
             }

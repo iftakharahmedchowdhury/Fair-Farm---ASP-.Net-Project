@@ -26,7 +26,7 @@ namespace BLL.Services.Farmer
             var perdayrent = data.PerdayRent;
             data.RentStatus = "Not Rented";
             var checkuser = DataAccessFactory.UserData().Get(owneruserid);
-            
+
             if (checkuser == null)
             {
                 throw new Exception("Your Profile Does not Exists in the System.");
@@ -87,18 +87,18 @@ namespace BLL.Services.Farmer
             return null;
         }
 
-        public static EquipmentRentDTO GetOwnRequestStatus(int id,int renterid)
+        public static EquipmentRentDTO GetOwnRequestStatus(int id, int renterid)
         {
             var data = FarmerDataAccessFactory.FarmerEquipmentRentData().GetmyOwnRequest(id);
             if (data == null)
             {
                 throw new Exception("This Equpment Does not Exists in the System.");
             }
-            else if(data.RenterUserId!=renterid)
+            else if (data.RenterUserId != renterid)
             {
                 throw new Exception("You are not Renter of this Eqipment.");
             }
-            else if(data.RenterUserId == data.OwnerUserId)
+            else if (data.RenterUserId == data.OwnerUserId)
             {
                 throw new Exception("Invalid Request.");
 
@@ -132,9 +132,9 @@ namespace BLL.Services.Farmer
             return null;
         }
 
-        public static EquipmentRentDTO UpdateforMyRentRequest(int renteruserid , int equipmentid)
+        public static EquipmentRentDTO UpdateforMyRentRequest(int renteruserid, int equipmentid)
         {
-        
+
             var checkrenterexists = DataAccessFactory.UserData().Get(renteruserid);
             var checkequpment = FarmerDataAccessFactory.FarmerEquipmentRentData().Get(equipmentid);
 
@@ -146,7 +146,7 @@ namespace BLL.Services.Farmer
             {
                 throw new Exception("Equpment Does not Exists in the System.");
             }
-            else if(checkrenterexists.UserId== checkequpment.OwnerUserId)
+            else if (checkrenterexists.UserId == checkequpment.OwnerUserId)
             {
                 throw new Exception("You Can not Rent Your Equipment.");
             }
@@ -162,7 +162,7 @@ namespace BLL.Services.Farmer
             {
                 throw new Exception("You have Already Requested for this Equpment.");
             }
-            else if(checkequpment.RenterUserId!= checkequpment.OwnerUserId)
+            else if (checkequpment.RenterUserId != checkequpment.OwnerUserId)
             {
                 throw new Exception("Another User is Already Requested For the Equipment Please Try Another.");
             }
@@ -204,27 +204,27 @@ namespace BLL.Services.Farmer
             {
                 throw new Exception("You Can not Update the Region.");
             }
-            else if ((checkequpment.RentStatus == "Rented") && (data.RentStatus!="Rented" || data.RentStatus != null))
+            else if ((checkequpment.RentStatus == "Rented") && (data.RentStatus != "Rented" || data.RentStatus != null))
             {
                 throw new Exception("This Equipment is Rented You can not Modify it.");
             }
-            else if((data.RentStatus=="Rented" && (checkequpment.RenterUserId==checkequpment.OwnerUserId)) || ((data.RentStatus != "Rented" && data.RentStatus != "Not Rented")))
+            else if ((data.RentStatus == "Rented" && (checkequpment.RenterUserId == checkequpment.OwnerUserId)) || ((data.RentStatus != "Rented" && data.RentStatus != "Not Rented")))
             {
                 throw new Exception("You are Providing Invalid Rent Status.");
             }
-            else if(data.RentStatus != "Rented")
+            else if (data.RentStatus != "Rented")
             {
                 data.RenterUserId = checkequpment.OwnerUserId;
             }
-            else if(data.RentStatus == "Rented" && (checkequpment.RenterUserId != checkequpment.OwnerUserId))
+            else if (data.RentStatus == "Rented" && (checkequpment.RenterUserId != checkequpment.OwnerUserId))
             {
                 data.OwnerUserId = checkequpment.OwnerUserId;
                 data.RentStatus = "Rented";
-                data.Region= checkownerexists.UserRegion;
-                data.Location= checkequpment.Location;
-                data.EquipmentName=checkequpment.EquipmentName;
-                data.PerdayRent= checkequpment.PerdayRent;
-                data.Id= checkequpment.Id;
+                data.Region = checkownerexists.UserRegion;
+                data.Location = checkequpment.Location;
+                data.EquipmentName = checkequpment.EquipmentName;
+                data.PerdayRent = checkequpment.PerdayRent;
+                data.Id = checkequpment.Id;
                 data.RenterUserId = checkequpment.RenterUserId;
 
             }

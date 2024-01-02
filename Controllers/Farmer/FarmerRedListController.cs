@@ -13,12 +13,12 @@ namespace Fair_Farm.Controllers.Farmer
         /*[Logged]*/
         [HttpGet]
         [Route("api/farmeraccessredlisteduserslist/{region}/{type}")]
-        public HttpResponseMessage GetRedListedUserListsbyFarmer(string region,string type)
+        public HttpResponseMessage GetRedListedUserListsbyFarmer(string region, string type)
         {
             try
             {
-                var data = FarmerAccessRedListService.GetRedListedUserbyFarmerandbyRegion(region,type);
-                if(data.Count==0)
+                var data = FarmerAccessRedListService.GetRedListedUserbyFarmerandbyRegion(region, type);
+                if (data.Count == 0)
                 {
                     return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "There is No User in the RedList" });
                 }
@@ -39,7 +39,7 @@ namespace Fair_Farm.Controllers.Farmer
         /*[Logged]*/
         [HttpGet]
         [Route("api/farmeraccessredlistedsingleuserbyid/{id}/{type}")]
-        public HttpResponseMessage GetRedListedSingleUsersbyFarmer(int id, string type )
+        public HttpResponseMessage GetRedListedSingleUsersbyFarmer(int id, string type)
         {
             try
             {

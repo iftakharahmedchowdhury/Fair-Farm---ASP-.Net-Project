@@ -32,7 +32,7 @@ namespace BLL.Services.Farmer
             {
                 throw new Exception("Your Profile Does not Exists in the System.");
             }
-            else if(transport==null)
+            else if (transport == null)
             {
                 throw new Exception("This Transport Does not Exists in the System.");
             }
@@ -60,15 +60,15 @@ namespace BLL.Services.Farmer
             {
                 throw new Exception("Admin Can not Rent the Transport.");
             }
-            else if(checkalreadyrequest!=null)
+            else if (checkalreadyrequest != null)
             {
                 throw new Exception("You Already Requested For this Transport.");
             }
             data.Region = checkuser.UserRegion;
-            data.TotalRent = transport.PerdayRent* days;
+            data.TotalRent = transport.PerdayRent * days;
             data.Approvestatus = "Pending";
             data.TransportationName = transport.TransportationName;
-            data.TransportationNumber=transport.TransportationNumber;
+            data.TransportationNumber = transport.TransportationNumber;
             var addedData = FarmerDataAccessFactory.FarmerTransportationFleetRentData().Add(data);
 
             var config2 = new MapperConfiguration(cfg =>
@@ -82,7 +82,7 @@ namespace BLL.Services.Farmer
         }
 
 
-        public static TransportationFleetRentDTO UpdatebyFarmer(int id,int renterid, TransportationFleetRentDTO s)
+        public static TransportationFleetRentDTO UpdatebyFarmer(int id, int renterid, TransportationFleetRentDTO s)
         {
             var config = new MapperConfiguration(cfg =>
             {
@@ -90,9 +90,9 @@ namespace BLL.Services.Farmer
             });
             var mapper = new Mapper(config);
             var data = mapper.Map<TransportationFleetRent>(s);
-            var transport= FarmerDataAccessFactory.FarmerTransportationFleetRentData().Get(id);
+            var transport = FarmerDataAccessFactory.FarmerTransportationFleetRentData().Get(id);
 
-            if(transport == null)
+            if (transport == null)
             {
                 throw new Exception("This Transportation Does not Exists in the System.");
             }
@@ -100,11 +100,11 @@ namespace BLL.Services.Farmer
             {
                 throw new Exception("You Do not Provided Any Data To Update.");
             }
-            else if(data.Location==null && data.HowmanydaysforRent<=0)
+            else if (data.Location == null && data.HowmanydaysforRent <= 0)
             {
                 throw new Exception("You Do not Provided Any Data To Update.");
             }
-            else if(transport.Renterid!= renterid)
+            else if (transport.Renterid != renterid)
             {
                 throw new Exception("You are not Renter of this Transport.");
             }
@@ -112,7 +112,7 @@ namespace BLL.Services.Farmer
             {
                 throw new Exception("You can Not Modify this Record as itis Already Approved.");
             }
-            else if (data.HowmanydaysforRent<=0 && data.Location!=null)
+            else if (data.HowmanydaysforRent <= 0 && data.Location != null)
             {
                 data.TotalRent = transport.TotalRent;
             }
@@ -137,7 +137,7 @@ namespace BLL.Services.Farmer
             data.Approvestatus = transport.Approvestatus;
             data.TransportationFleetRegisterId = transport.TransportationFleetRegisterId;
             data.Renterid = transport.Renterid;
-            data.Id= id;
+            data.Id = id;
 
             var updatedData = FarmerDataAccessFactory.FarmerTransportationFleetRentData().Update(data);
             var config2 = new MapperConfiguration(cfg =>

@@ -30,9 +30,9 @@ namespace DAL.Repos.Farmer
             return false;
         }
 
-        public TransportationFleetRent Getexists(int renterid, int transportregisterid) 
+        public TransportationFleetRent Getexists(int renterid, int transportregisterid)
         {
-            return db.TransportationFleetRents.FirstOrDefault(i => i.Renterid == renterid && i.TransportationFleetRegisterId== transportregisterid && i.Approvestatus=="Pending");
+            return db.TransportationFleetRents.FirstOrDefault(i => i.Renterid == renterid && i.TransportationFleetRegisterId == transportregisterid && i.Approvestatus == "Pending");
 
         }
         public TransportationFleetRent Get(int ownerid)
