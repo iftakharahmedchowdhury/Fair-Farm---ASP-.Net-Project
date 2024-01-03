@@ -42,7 +42,7 @@ namespace BLL.Services.Farmer
             }
             else if (transport.Region != checkuser.UserRegion)
             {
-                throw new Exception("This Transport Does not Belings to Your Region.");
+                throw new Exception("This Transport Does not Belongs to Your Region.");
             }
             else if (transport.RentedStatus == "Rented")
             {
@@ -102,7 +102,7 @@ namespace BLL.Services.Farmer
             }
             else if (data.Location == null && data.HowmanydaysforRent <= 0)
             {
-                throw new Exception("You Do not Provided Any Data To Update.");
+                throw new Exception("You Do not Provided Correct Data To Update.");
             }
             else if (transport.Renterid != renterid)
             {

@@ -86,6 +86,9 @@ namespace Fair_Farm.Controllers
         {
             try
             {
+                
+                  
+
                 var updatedUser = UserService.Update(user);
                 if (updatedUser != null)
                 {

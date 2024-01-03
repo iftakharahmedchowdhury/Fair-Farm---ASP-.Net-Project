@@ -52,10 +52,10 @@ namespace Fair_Farm.Controllers.Farmer
                 {
                     return Request.CreateResponse(HttpStatusCode.BadRequest, new { Message = ex.Message });
                 }
-                else if (ex.Message == "Your Profile Region Does not Match With the Planting Calender Region.")
+                /*else if (ex.Message == "Your Profile Region Does not Match With the Planting Calender Region.")
                 {
                     return Request.CreateResponse(HttpStatusCode.BadRequest, new { Message = ex.Message });
-                }
+                }*/
                 else if (ex.Message == "Your Profile Does not Exists in the System.")
                 {
                     return Request.CreateResponse(HttpStatusCode.BadRequest, new { Message = ex.Message });

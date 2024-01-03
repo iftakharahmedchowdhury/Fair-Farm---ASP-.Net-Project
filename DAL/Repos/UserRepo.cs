@@ -68,5 +68,10 @@ namespace DAL.Repos
             var user = db.Users.FirstOrDefault(u => u.UsersUserName.Equals(userName));
             return user != null ? user.UserId : -1; 
         }
+        public User GetUserByEmail(string email)
+        {
+            var user = db.Users.FirstOrDefault(u => u.UserEmail.Equals(email));
+            return user;
+        }
     }
 }

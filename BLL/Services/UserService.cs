@@ -30,7 +30,20 @@ namespace BLL.Services
        
         public static UserDTO Add(UserDTO c)
         {
-            var validationResults = new List<ValidationResult>();
+            c.UserRedList = false;
+            c.UserLogInValid = false;
+
+            var existingUser = DataAccessFactory.GetUserIdData().GetUserByEmail(c.UserEmail);
+            if (existingUser != null)
+            {
+                {
+                
+                    throw new Exception("Email already exists. Please use a different email.");
+                }
+            }
+
+           
+                var validationResults = new List<ValidationResult>();
             var context = new System.ComponentModel.DataAnnotations.ValidationContext(c, serviceProvider: null, items: null);
             bool isValid = Validator.TryValidateObject(c, context, validationResults, validateAllProperties: true);
 
@@ -80,6 +93,9 @@ namespace BLL.Services
 
         public static UserDTO Update(UserDTO user)
         {
+            /*UserDTO d = Get(user.UserId);*/
+           /* d.UserLogInValid=user.UserLogInValid;
+            d.UserRedList=user.UserRedList;*/
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<UserDTO, User>();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.EF.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,6 @@ namespace DAL.Interfaces
     public interface IUserIdFormUname
     {
         int GetUserIdByUserName(string userName);
-
+        User GetUserByEmail(string email);
     }
 }

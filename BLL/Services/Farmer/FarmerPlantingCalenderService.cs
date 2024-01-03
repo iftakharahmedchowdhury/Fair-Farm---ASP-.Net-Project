@@ -40,7 +40,7 @@ namespace BLL.Services.Farmer
             var region = data.Region;
             var exists = FarmerDataAccessFactory.ExistingPlantingCalenderData().Get(userId, season, seasonalYear, cropsName);
             var checkuser = DataAccessFactory.UserData().Get(userId);
-            var checkregion = DataAccessFactory.UserData().Get(userId);
+            //var checkregion = DataAccessFactory.UserData().Get(userId);
             if (exists != null)
             {
                 throw new Exception("Entry with similar characteristics already exists from your Profile.");
@@ -53,16 +53,16 @@ namespace BLL.Services.Farmer
             {
                 throw new Exception("Your Profile Does not Match With the Farmer.");
             }
-            else if (checkregion.UserRegion != region)
+            /*else if (checkregion.UserRegion != region)
             {
                 throw new Exception("Your Profile Region Does not Match With the Planting Calender Region.");
 
-            }
+            }*/
 
 
             data.CropsName = cropsName;
             data.SeasonName = season;
-
+            data.Region = checkuser.UserRegion;
             var addedData = FarmerDataAccessFactory.PlantingCalenderData().Add(data);
 
             var config2 = new MapperConfiguration(cfg =>
@@ -116,13 +116,20 @@ namespace BLL.Services.Farmer
             {
                 throw new Exception("This Calender Product Does not Belongs to You.");
             }
-            else if (checkregion.UserRegion != region)
-            {
-                throw new Exception("Your Profile Region Does not Match With the Planting Calender Region.");
-            }
+            /*            else if (checkregion.UserRegion != region)
+                        {
+                            throw new Exception("Your Profile Region Does not Match With the Planting Calender Region.");
+                        }*/
             data.Id = calenderid;
-            data.CropsName = data.CropsName.ToLower();
-            data.SeasonName = data.SeasonName.ToLower();
+            if (data.CropsName != null)
+            {
+                data.CropsName = data.CropsName.ToLower();
+            }
+            if (data.SeasonName != null)
+            {
+                data.SeasonName = data.SeasonName.ToLower();
+            }
+            data.Region = checkregion.UserRegion;
             var updatedData = FarmerDataAccessFactory.PlantingCalenderData().Update(data);
             var config2 = new MapperConfiguration(cfg =>
             {

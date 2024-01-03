@@ -267,7 +267,7 @@ namespace Fair_Farm.Controllers.Farmer
         /*[FarmerAccess]*/
         [HttpDelete]
         [Route("api/equipmentrentdelete/{id}/{ownerid}")]
-        public HttpResponseMessage DeletePlantingCalender(int id, int ownerid)
+        public HttpResponseMessage DeleteEquipmentByOwner(int id, int ownerid)
         {
             try
             {

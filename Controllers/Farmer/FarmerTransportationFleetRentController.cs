@@ -15,7 +15,7 @@ namespace Fair_Farm.Controllers.Farmer
         /*[FarmerAccess]*/
         [HttpPost]
         [Route("api/transportationfleetRent/create")]
-        public HttpResponseMessage Create(TransportationFleetRentDTO s)
+        public HttpResponseMessage CreateF(TransportationFleetRentDTO s)
         {
             try
             {
@@ -40,7 +40,7 @@ namespace Fair_Farm.Controllers.Farmer
                 {
                     return Request.CreateResponse(HttpStatusCode.BadRequest, new { Message = ex.Message });
                 }
-                else if (ex.Message == "This Transport Does not Belings to Your Region.")
+                else if (ex.Message == "This Transport Does not Belongs to Your Region.")
                 {
                     return Request.CreateResponse(HttpStatusCode.BadRequest, new { Message = ex.Message });
                 }
@@ -74,7 +74,7 @@ namespace Fair_Farm.Controllers.Farmer
         /*[FarmerAccess]*/
         [HttpPut]
         [Route("api/transportationfleetRentfarmer/{id}/{renterid}")]
-        public HttpResponseMessage UpdateFarmerTransportationRentRequest(int id, int renterid, TransportationFleetRentDTO s)
+        public HttpResponseMessage UpdateFarmerTransportationRentRequestF(int id, int renterid, TransportationFleetRentDTO s)
         {
             try
             {
@@ -102,6 +102,10 @@ namespace Fair_Farm.Controllers.Farmer
                 {
                     return Request.CreateResponse(HttpStatusCode.BadRequest, new { Message = ex.Message });
                 }
+                else if (ex.Message == "You Do not Provided Correct Data To Update.")
+                {
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, new { Message = ex.Message });
+                }
                 else if (ex.Message == "You can Not Modify this Record as itis Already Approved.")
                 {
                     return Request.CreateResponse(HttpStatusCode.BadRequest, new { Message = ex.Message });
@@ -115,7 +119,7 @@ namespace Fair_Farm.Controllers.Farmer
         /*[FarmerAccess]*/
         [HttpDelete]
         [Route("api/transportationfleetRent/{id}/{renterid}")]
-        public HttpResponseMessage DeleteFarmerTransportationRentRequest(int id, int renterid)
+        public HttpResponseMessage DeleteFarmerTransportationRentRequestF(int id, int renterid)
         {
             try
             {
@@ -155,7 +159,7 @@ namespace Fair_Farm.Controllers.Farmer
         /*[Logged]*/
         [HttpGet]
         [Route("api/transportationfleetRentfarmerrenthistroy/{renterid}")]
-        public HttpResponseMessage GetMyTransportastionRentHistory(int renterid)
+        public HttpResponseMessage GetMyTransportastionRentHistoryF(int renterid)
         {
             try
             {
@@ -180,7 +184,7 @@ namespace Fair_Farm.Controllers.Farmer
         /*[Logged]*/
         [HttpGet]
         [Route("api/transportationfleetRent/{id}/{renterid}")]
-        public HttpResponseMessage GetMyTransportRentRequestStatus(int id, int renterid)
+        public HttpResponseMessage GetMyTransportRentRequestStatusF(int id, int renterid)
         {
             try
             {
